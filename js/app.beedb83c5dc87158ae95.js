@@ -10781,25 +10781,99 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   methods: {}
 }).$mount('#timer');
 
-const form = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
+new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   el: '#ticketForm',
   data() {
     return {
       hasJS: true,
-      form: {
-        name: 'Marcin Zaborowski',
-        email: '',
-        phone: ''
+      step1: {
+        disabled: false,
+        collapsed: false,
+        buttonVisible: true,
+        controlVisible: false,
+        fields: [
+          {
+            value: '',
+            name: 'name',
+            label: 'Name',
+            reqs: 'required|min:3'
+          },
+          {
+            value: '',
+            name: 'email',
+            label: 'Email address'
+          },
+          {
+            value: '',
+            name: 'phone',
+            label: 'Phone'
+          }
+        ]
+      },
+      step2: {
+        disabled: false,
+        collapsed: false,
+        buttonVisible: true,
+        controlVisible: false,
+        fields: [
+          {
+            value: '',
+            name: 'placeholder',
+            label: 'placeholder'
+          }
+        ]
+      },
+      step3: {
+        disabled: false,
+        collapsed: false,
+        buttonVisible: true,
+        controlVisible: false,
+        fields: [
+          {
+            value: '',
+            name: 'placeholder',
+            label: 'placeholder'
+          }
+        ]
+      },
+      step4: {
+        disabled: false,
+        collapsed: false,
+        buttonVisible: true,
+        controlVisible: false,
+        fields: [
+          {
+            value: '',
+            name: 'placeholder',
+            label: 'placeholder'
+          }
+        ]
       }
     };
   },
   created() {},
   methods: {
-    onSubmit: () => {
-      console.log(form.form.name);
-      form.$validator.validateAll().then(r => {
+    toggleInputs: function(stepNumber) {
+      const step = 'step' + stepNumber;
+      this[step].disabled = !this[step].disabled;
+    },
+    onNext: function(stepNumber) {
+      const step = 'step' + stepNumber;
+      this.$validator.validateAll(step).then(r => {
+        if (r) {
+          this[step].buttonVisible = !this[step].buttonVisible;
+          this[step].controlVisible = !this[step].controlVisible;
+          this['step' + (stepNumber + 1)].collapsed = true;
+          this.toggleInputs(stepNumber);
+        }
+      });
+    },
+    onSubmit: function() {
+      console.log(this.step1.name);
+      this.$validator.validateAll().then(r => {
         if (r) {
           console.log('submit');
+          console.log(r);
         }
       });
     }
@@ -33340,7 +33414,7 @@ exports.default = _default;
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1552339929487
+      // 1552353060614
       var cssReload = require("!../../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -33353,7 +33427,7 @@ exports.default = _default;
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1552339929472
+      // 1552353060602
       var cssReload = require("!../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -33366,7 +33440,7 @@ exports.default = _default;
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1552339930901
+      // 1552353062092
       var cssReload = require("!../node_modules/css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
