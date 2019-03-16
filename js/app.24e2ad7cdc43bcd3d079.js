@@ -34056,7 +34056,9 @@ const step4 = {
 /* harmony default export */ __webpack_exports__["a"] = ([
   'assets/img/photo1.png',
   'assets/img/photo2.png',
-  'assets/img/photo.png'
+  'assets/img/photo3.png',
+  'assets/img/photo4.png',
+  'assets/img/photo5.png'
 ]);
 
 
@@ -34066,7 +34068,7 @@ const step4 = {
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1552772323381
+      // 1552775761609
       var cssReload = require("!../../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -34079,7 +34081,7 @@ const step4 = {
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1552772323361
+      // 1552775761592
       var cssReload = require("!../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -34092,7 +34094,7 @@ const step4 = {
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1552772324898
+      // 1552775763121
       var cssReload = require("!../node_modules/css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
