@@ -10734,12 +10734,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vee_validate__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bootstrap_vue__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bootstrap_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_bootstrap_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_bootstrap_dist_css_bootstrap_css__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_bootstrap_dist_css_bootstrap_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_bootstrap_dist_css_bootstrap_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_bootstrap_vue_dist_bootstrap_vue_css__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_bootstrap_vue_dist_bootstrap_vue_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_bootstrap_vue_dist_bootstrap_vue_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_src_style_scss__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_src_style_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_src_style_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_assets_sections_agenda_agenda_js__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_assets_sections_ticketForm_formFields_js__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_assets_sections_howItWas_images_js__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_bootstrap_dist_css_bootstrap_css__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_bootstrap_dist_css_bootstrap_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_bootstrap_dist_css_bootstrap_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_bootstrap_vue_dist_bootstrap_vue_css__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_bootstrap_vue_dist_bootstrap_vue_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_bootstrap_vue_dist_bootstrap_vue_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_src_style_scss__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_src_style_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_src_style_scss__);
+
+
+
+
 
 
 
@@ -10752,6 +10759,8 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_2_vee_
 
 
 
+
+// countDown =================================
 
 new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   data: {
@@ -10776,82 +10785,32 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
       this.jiraDayDate,
       ~__WEBPACK_IMPORTED_MODULE_1_countdown___default.a.YEARS & ~__WEBPACK_IMPORTED_MODULE_1_countdown___default.a.MILLISECONDS
     );
-  },
-
-  methods: {}
+  }
 }).$mount('#timer');
+
+// AGENDA =================================
+
+new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
+  data: {
+    hasJS: true,
+    agendaDay1: __WEBPACK_IMPORTED_MODULE_4_assets_sections_agenda_agenda_js__["a" /* day1 */],
+    agendaDay2: __WEBPACK_IMPORTED_MODULE_4_assets_sections_agenda_agenda_js__["b" /* day2 */]
+  }
+}).$mount('#agenda');
+
+// ticketForm =================================
 
 new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   el: '#ticketForm',
   data() {
     return {
       hasJS: true,
-      step1: {
-        disabled: false,
-        collapsed: false,
-        buttonVisible: true,
-        controlVisible: false,
-        fields: [
-          {
-            value: '',
-            name: 'name',
-            label: 'Name',
-            reqs: 'required|min:3'
-          },
-          {
-            value: '',
-            name: 'email',
-            label: 'Email address'
-          },
-          {
-            value: '',
-            name: 'phone',
-            label: 'Phone'
-          }
-        ]
-      },
-      step2: {
-        disabled: false,
-        collapsed: false,
-        buttonVisible: true,
-        controlVisible: false,
-        fields: [
-          {
-            value: '',
-            name: 'placeholder',
-            label: 'placeholder'
-          }
-        ]
-      },
-      step3: {
-        disabled: false,
-        collapsed: false,
-        buttonVisible: true,
-        controlVisible: false,
-        fields: [
-          {
-            value: '',
-            name: 'placeholder',
-            label: 'placeholder'
-          }
-        ]
-      },
-      step4: {
-        disabled: false,
-        collapsed: false,
-        buttonVisible: true,
-        controlVisible: false,
-        fields: [
-          {
-            value: '',
-            name: 'placeholder',
-            label: 'placeholder'
-          }
-        ]
-      }
+      step1: __WEBPACK_IMPORTED_MODULE_5_assets_sections_ticketForm_formFields_js__["a" /* step1 */],
+      step2: __WEBPACK_IMPORTED_MODULE_5_assets_sections_ticketForm_formFields_js__["b" /* step2 */],
+      step3: __WEBPACK_IMPORTED_MODULE_5_assets_sections_ticketForm_formFields_js__["c" /* step3 */],
+      step4: __WEBPACK_IMPORTED_MODULE_5_assets_sections_ticketForm_formFields_js__["d" /* step4 */]
     };
   },
-  created() {},
   methods: {
     toggleInputs: function(stepNumber) {
       const step = 'step' + stepNumber;
@@ -10869,13 +10828,135 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
       });
     },
     onSubmit: function() {
-      console.log(this.step1.name);
       this.$validator.validateAll().then(r => {
         if (r) {
           console.log('submit');
           console.log(r);
         }
       });
+    }
+  }
+});
+
+// Gallery =================================
+
+new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
+  el: '#howItWas',
+  data: {
+    hasJS: true,
+    images: __WEBPACK_IMPORTED_MODULE_6_assets_sections_howItWas_images_js__["a" /* default */],
+    margin: 16,
+    index: 0,
+    position: 0,
+    x: null,
+    y: null,
+    fullscreen: false
+  },
+
+  mounted: function() {
+    window.addEventListener('load', this.setPosition);
+    window.addEventListener('resize', this.handleResize);
+    this.$el
+      .querySelector('.carouselContainer')
+      .addEventListener('touchstart', this.handleTouchStart, false);
+    this.$el
+      .querySelector('.carouselContainer')
+      .addEventListener('touchmove', this.handleTouchMove, false);
+  },
+  beforeDestroy() {
+    window.removeEventListener('load', this.setPosition);
+    window.removeEventListener('resize', this.handleResize);
+  },
+
+  watch: {
+    fullscreen: function() {
+      this.handleResize();
+    }
+  },
+
+  methods: {
+    handleResize: function() {
+      if (this.fullscreen) {
+        document.querySelector('body').setAttribute('style', 'overflow: hidden');
+        setTimeout(() => {
+          const images = this.$el.querySelectorAll('#carousel > img');
+          const container = this.$el.querySelector('.carouselContainer');
+          for (const img of images) {
+            if (img.height > container.clientHeight * 0.8) {
+              img.setAttribute('style', `width: auto; height: 80vh; margin: 0 ${this.margin}px`);
+            }
+            if (img.width > container.clientWidth) {
+              img.setAttribute('style', `width: 100vw; height: auto; margin: 0 ${this.margin}px`);
+            }
+          }
+          this.setPosition(this.index);
+        }, 10);
+      } else {
+        const images = this.$el.querySelectorAll('#carousel > img');
+        for (const img of images) {
+          img.setAttribute('style', `margin: 0 ${this.margin}px`);
+        }
+        document.querySelector('body').setAttribute('style', 'overflow: initial');
+        setTimeout(() => {
+          this.setPosition(this.index);
+        }, 10);
+      }
+    },
+    setPosition: function(mode) {
+      this.index = 0;
+      const width = this.$el.querySelector('.gallery').clientWidth;
+      const element = this.$el.querySelectorAll('#carousel > img')[0];
+      const elementSize = element.width / 2 + this.margin;
+      this.position = width / 2 - elementSize;
+      if (mode) {
+        for (let i = 0; i < mode; i++) {
+          this.move(1);
+        }
+      }
+    },
+    move: function(i) {
+      const images = this.$el.querySelectorAll('#carousel > img');
+      const nextElement = images[this.index + i];
+      if (nextElement) {
+        const thisElement = images[this.index];
+        this.index += i;
+        const nextElementSize =
+          (thisElement.width / 2 + nextElement.width / 2 + this.margin * 2) * (i * -1);
+        this.position += nextElementSize;
+      } else if (i === 1) {
+        this.setPosition();
+      } else {
+        const lastImageIndex = images.length - 1;
+        this.setPosition(lastImageIndex);
+      }
+    },
+
+    handleTouchStart: function(evt) {
+      const firstTouch = evt.touches[0];
+      this.x = firstTouch.clientX;
+      this.y = firstTouch.clientY;
+    },
+
+    handleTouchMove: function(evt) {
+      if (!this.x) {
+        return;
+      }
+      const xUp = evt.touches[0].clientX;
+      const yUp = evt.touches[0].clientY;
+
+      const xDiff = this.x - xUp;
+      const yDiff = this.y - yUp;
+      this.x = xUp;
+      this.y = yUp;
+      if (Math.abs(xDiff) > Math.abs(yDiff)) {
+        if (xDiff > 0) {
+          this.move(1);
+        } else {
+          this.move(-1);
+        }
+      }
+      this.x = null;
+      this.y = null;
     }
   }
 });
@@ -33410,11 +33491,582 @@ exports.default = _default;
 
 /***/ }),
 /* 194 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+const day1 = [
+  [{ time: '9:00 - 10:00', title: 'Registration', whole: true }],
+  [
+    {
+      time: '10:00 - 10:15',
+      title: 'Official start of the JIRA DAY 2019 conference',
+      speaker: 'Piotr Dorosz',
+      company: 'Deviniti',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    }
+  ],
+  [
+    {
+      time: '10:15 - 10:45',
+      title: 'Atlassian - Keynote',
+      speaker: 'Feico Mol',
+      company: 'Atlassian',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    }
+  ],
+  [
+    {
+      time: '10:45 - 11:15',
+      title: 'How Atlassian JIRA software supports HP on its LPPD journey',
+      speaker: 'Tanya Gordon',
+      company: 'HP',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    }
+  ],
+  [{ time: '11:15 - 11:45', title: 'Coffee Break', whole: true }],
+  [
+    {
+      time: '11:45 - 12:15',
+      title: 'Jira as a production management tool in content globalization',
+      speaker: 'Michał Cieślak',
+      company: 'Lionbridge',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title: 'Tackle the Chaos with Categories for Bitbucket',
+      speaker: 'Karen Schiekel',
+      company: 'Communardo',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title: 'How we implement and use JIRA Service Desk in Żabka',
+      speaker: 'Sebastian Krzewiński',
+      company: 'Żabka Polska',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    }
+  ],
+  [
+    {
+      time: '12:15 - 12:45',
+      title: 'Big changes in Jira 8.0 & Portfolio 3.0',
+      speaker: 'Małgorzata Gułgowska-Kowalska i Jakub Kurcek',
+      company: 'Atlassian',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title: 'Project reporting for Jira',
+      speaker: 'EazyBI',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title:
+        'Jira Service Desk in the fastest growing airline in Europe - LOT Polish Airlines (PL)',
+      speaker: 'Robert Świderski',
+      company: 'LOT',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    }
+  ],
+  [
+    {
+      time: '12:45 - 13:15',
+      title: 'Auto mating your Service Desk',
+      speaker: 'Tom Harris',
+      company: 'London AUG Leader',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title: 'Getting the most out of your Enterprise Service Management solution.',
+      speaker: 'Zihni Saglam',
+      company: 'Riada',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title: 'Od pomysłu i projektu do utrzymania w JIRA Service Desk (PL)',
+      speaker: 'Artur Karpisz',
+      company: 'Alior Bank',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    }
+  ],
+  [{ time: '13:15 - 14:30', title: 'Lunch Break', whole: true }],
+  [
+    {
+      time: '12:45 - 13:15',
+      title: 'Always on with Opsgenie',
+      speaker: 'Serhat Can',
+      company: 'OpsGenie',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title: 'Jira is from Mars, Users Are from Venus - How to Work Together on Earth?',
+      speaker: 'Katarzyna Pawlak',
+      company: 'Deviniti',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title: 'Meeting customers needs – workflow possibilities in Jira.',
+      speaker: 'Paweł Chumski',
+      company: 'Fujitsu',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    }
+  ],
+  [
+    {
+      time: '15:00 - 15:30',
+      title: 'History of Jira DC: past, present, bright future',
+      speaker: 'Ilya Zinoviev',
+      company: 'Atlassian',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title: 'Free your content with Refined',
+      speaker: 'Refined Wiki',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title: 'Demystifying Jira Cloud',
+      speaker: 'Tarun Sapra',
+      company: 'Ingenico Group',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    }
+  ],
+  [{ time: '15:00 - 15:30', title: 'Last Break', whole: true }],
+  [
+    {
+      time: '16:00 - 16:30',
+      title: 'Foundations of point-to-point application integrations.',
+      speaker: 'Łukasz Krupa',
+      company: 'Deviniti',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title: 'Successfully Scaling Communication Methods & Systems',
+      speaker: 'LucidChart',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title:
+        'Migration of jira projects between different instances in a large global organization.',
+      speaker: 'Hubert Rzyha',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    }
+  ],
+  [
+    {
+      time: '16:30 - 17:00',
+      title: 'Common pitfalls of Jira greenfield implementations (and how to avoid them)',
+      speaker: 'Bogdan Górka',
+      company: 'Deviniti',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title: 'Discover Tempo Apps for Jira',
+      speaker: 'Tempo',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title: 'Synchronization in Jira (PL)',
+      speaker: 'Marcin Skwara',
+      company: 'Link4',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    }
+  ],
+  [
+    {
+      time: '17:00 - 17:30',
+      title: 'Jira bugfix - what are the rules of the game?',
+      speaker: 'Michał Warkoczw',
+      company: 'Atlassian',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title: 'Document management in Jira and Confluence',
+      speaker: 'Stiltsoft',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {}
+  ],
+  [{ time: '17:30', title: 'After Party', whole: true }]
+];
+/* harmony export (immutable) */ __webpack_exports__["a"] = day1;
+
+
+const day2 = [
+  [
+    {
+      time: '09:00 - 10:30',
+      title: 'SAFe, Waterfall and hybrid project management in Jira',
+      speaker: 'Software Plant',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title: 'Riada - A demo of the Insight and Insight Discovery.',
+      speaker: 'Zihni Saglam',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      time: '09:00 - 09:45',
+      title: 'Creating handy Jira dashboards and reports in Atlassian Confluence',
+      speaker: 'StiltSoft',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title: 'A step-by-step method for effectively implementing Jira Service Desk',
+      speaker: 'Radosław Cichocki',
+      company: 'Deviniti',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    }
+  ],
+  [
+    { spacer: true },
+    { spacer: true },
+    {
+      time: '10:00 - 10:45',
+      title: 'The Power of Visual Communication within Jira & Confluence',
+      speaker: 'Lucidchart',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title:
+        'How much do you know about your Jira projects? Build a project central with Profields and unleash business decisions',
+      speaker: 'Deiser',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    }
+  ],
+  [{ time: '10:30 - 11:00', title: 'Coffee Break', whole: true }],
+  [
+    {
+      time: '11:00 - 12:30',
+      title: 'Reporting on Jira for different teams and basic functionality of eazyBI',
+      speaker: 'eazyBI',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title: 'How to structure and personalize your wiki with Metadata for Confluence',
+      speaker: 'Karen Schiekel',
+      company: 'Communardo',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      time: '11:00 - 11:45',
+      title:
+        'How does TestFLO support its own development. Testing process and test automation examples.',
+      speaker: 'Bogusław Osuch',
+      company: 'Deviniti',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title:
+        'How to take control of your company’s assets, equipment and tools with Asset Tracker for Jira',
+      speaker: 'Spartez',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    }
+  ],
+  [
+    { spacer: true },
+    { spacer: true },
+    {
+      time: '12:00 - 12:45',
+      title: 'From time tracking to resource management: Improving Jira with Tempo apps',
+      speaker: 'Tempo',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title: 'Implementing SAFe with Jira and Structure',
+      speaker: 'Eugene Sokhransky',
+      company: 'ALM Works',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    }
+  ],
+  [{ time: '12:30 - 14:00', title: 'Lunch Break', whole: true }],
+  [
+    {
+      time: '14:00 - 15:30',
+      title: 'Single Sign On Deep Dive - E asy Integration with Atlassian Apps',
+      speaker: 'Resolution',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title: 'Navigating the Road to Document Control',
+      speaker: 'Jorge Merino',
+      company: 'Comalatech',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      time: '14:00 - 14:45',
+      title: 'Investigate requirements and test products like Sherlock Holmes (PL)',
+      speaker: 'Natalia Korybska, Jarosław Solecki',
+      company: 'Deviniti',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title:
+        'Transform Jira and Confluence into your own branded, easy to navigate, customizable site',
+      speaker: 'RefinedWiki',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    }
+  ],
+  [
+    { spacer: true },
+    {
+      spacer: true,
+      title: 'So Long, Silos! How to Better Manage Your Documents in Confluence.',
+      speaker: 'K15t',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      time: '15:00 - 15:45',
+      title: 'How to mix a delicious cocktail from Jira and Email? (extended version)',
+      speaker: 'META-INF',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    },
+    {
+      title: 'Become the Andy Warhol of your Customer Portal (PL)',
+      speaker: 'Katarzyna Pawlak, Michał Sztuka',
+      company: 'Deviniti',
+      extra: {
+        toggle: false,
+        content: 'hello'
+      }
+    }
+  ],
+  [{ time: '16:00 - 16:30', title: 'Closing note with price lottery', whole: true }]
+];
+/* harmony export (immutable) */ __webpack_exports__["b"] = day2;
+
+
+
+/***/ }),
+/* 195 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+const step1 = {
+  disabled: false,
+  collapsed: false,
+  buttonVisible: true,
+  controlVisible: false,
+  fields: [
+    {
+      value: '',
+      name: 'name',
+      label: 'Name',
+      reqs: 'required|min:3'
+    },
+    {
+      value: '',
+      name: 'email',
+      label: 'Email address'
+    },
+    {
+      value: '',
+      name: 'phone',
+      label: 'Phone'
+    }
+  ]
+};
+/* harmony export (immutable) */ __webpack_exports__["a"] = step1;
+
+
+const step2 = {
+  disabled: false,
+  collapsed: false,
+  buttonVisible: true,
+  controlVisible: false,
+  fields: [
+    {
+      value: '',
+      name: 'placeholder',
+      label: 'placeholder'
+    }
+  ]
+};
+/* harmony export (immutable) */ __webpack_exports__["b"] = step2;
+
+
+const step3 = {
+  disabled: false,
+  collapsed: false,
+  buttonVisible: true,
+  controlVisible: false,
+  fields: [
+    {
+      value: '',
+      name: 'placeholder',
+      label: 'placeholder'
+    }
+  ]
+};
+/* harmony export (immutable) */ __webpack_exports__["c"] = step3;
+
+
+const step4 = {
+  disabled: false,
+  collapsed: false,
+  buttonVisible: true,
+  controlVisible: false,
+  fields: [
+    {
+      value: '',
+      name: 'placeholder',
+      label: 'placeholder'
+    }
+  ]
+};
+/* harmony export (immutable) */ __webpack_exports__["d"] = step4;
+
+
+
+/***/ }),
+/* 196 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ([
+  'assets/sections/worth/photo1.png',
+  'assets/sections/worth/photo1.png',
+  'assets/sections/worth/photo1.png'
+]);
+
+
+/***/ }),
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1552353060614
+      // 1552772323381
       var cssReload = require("!../../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -33422,12 +34074,12 @@ exports.default = _default;
   
 
 /***/ }),
-/* 195 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1552353060602
+      // 1552772323361
       var cssReload = require("!../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -33435,12 +34087,12 @@ exports.default = _default;
   
 
 /***/ }),
-/* 196 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1552353062092
+      // 1552772324898
       var cssReload = require("!../node_modules/css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
