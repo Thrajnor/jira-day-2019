@@ -34054,9 +34054,9 @@ const step4 = {
 
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ([
-  'assets/photo1.png',
-  'assets/photo2.png',
-  'assets/photo.png'
+  'assets/img/photo1.png',
+  'assets/img/photo2.png',
+  'assets/img/photo.png'
 ]);
 
 
