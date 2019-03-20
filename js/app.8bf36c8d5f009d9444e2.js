@@ -10737,12 +10737,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_assets_sections_agenda_agenda_js__ = __webpack_require__(194);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_assets_sections_ticketForm_formFields_js__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_assets_sections_howItWas_images_js__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_bootstrap_dist_css_bootstrap_css__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_bootstrap_dist_css_bootstrap_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_bootstrap_dist_css_bootstrap_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_bootstrap_vue_dist_bootstrap_vue_css__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_bootstrap_vue_dist_bootstrap_vue_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_bootstrap_vue_dist_bootstrap_vue_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_src_style_scss__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_src_style_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_src_style_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_assets_sections_speakers_speakers_js__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_assets_sections_partners_partners_js__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_bootstrap_dist_css_bootstrap_css__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_bootstrap_dist_css_bootstrap_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_bootstrap_dist_css_bootstrap_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_bootstrap_vue_dist_bootstrap_vue_css__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_bootstrap_vue_dist_bootstrap_vue_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_bootstrap_vue_dist_bootstrap_vue_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_src_style_scss__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_src_style_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_src_style_scss__);
+
+
 
 
 
@@ -10802,6 +10806,15 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   }
 }).$mount('#timer');
 
+// speakers =================================
+
+new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
+  data: {
+    hasJS: true,
+    category1: __WEBPACK_IMPORTED_MODULE_7_assets_sections_speakers_speakers_js__["a" /* default */]
+  }
+}).$mount('#speakers');
+
 // AGENDA =================================
 
 new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
@@ -10811,6 +10824,16 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     agendaDay2: __WEBPACK_IMPORTED_MODULE_4_assets_sections_agenda_agenda_js__["b" /* day2 */]
   }
 }).$mount('#agenda');
+
+// AGENDA =================================
+
+new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
+  data: {
+    hasJS: true,
+    gold: __WEBPACK_IMPORTED_MODULE_8_assets_sections_partners_partners_js__["a" /* gold */],
+    silver: __WEBPACK_IMPORTED_MODULE_8_assets_sections_partners_partners_js__["b" /* silver */]
+  }
+}).$mount('#partners');
 
 // ticketForm =================================
 
@@ -34112,38 +34135,301 @@ const step4 = {
 
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ([
-  'assets/sections/howItWas/gallery_1.png',
-  'assets/sections/howItWas/gallery_2.png',
-  'assets/sections/howItWas/gallery_3.png',
-  'assets/sections/howItWas/gallery_4.png'
+  'assets/img/gallery_1.png',
+  'assets/img/gallery_2.png',
+  'assets/img/gallery_3.png',
+  'assets/img/gallery_4.png'
 ]);
 
 
 /***/ }),
 /* 197 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
-    if(false) {
-      // 1553075767870
-      var cssReload = require("!../../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
-      module.hot.dispose(cssReload);
-      module.hot.accept(undefined, cssReload);;
-    }
-  
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ([
+  {
+    avatar: 'assets/img/placeholderAvatar.svg',
+    name: 'Sebastian Krzewiński',
+    company: 'Żabka Polska sp. z o.o.',
+    socialMedia: [
+      { name: 'linkedIn', link: 'https://www.linkedin.com/in/sebastian-krzewiński-9882435a/' }
+    ]
+  },
+  {
+    avatar: 'assets/img/placeholderAvatar.svg',
+    name: 'Michał Cieślak',
+    company: 'Lionbridge',
+    socialMedia: [
+      { name: 'linkedIn', link: 'https://www.linkedin.com/in/michal-cieslak-62225318/' }
+    ]
+  },
+  {
+    avatar: 'assets/img/Michał_Warkocz.jpg',
+    name: 'Michał Warkocz',
+    company: 'Atlassian',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/michal-warkocz/' }]
+  },
+  {
+    avatar: 'assets/img/Ilya_Zinoviev.jpg',
+    name: 'Ilya Zinoviev',
+    company: 'Atlassian',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/ilya-zinoviev-49581271/' }]
+  },
+  {
+    avatar: 'assets/img/Gosia_Gułagowska.jpg',
+    name: 'Małgorzata Gułgowska-Kowalska',
+    company: 'Atlassian',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/malgorzatagulgowska/' }]
+  },
+  {
+    avatar: 'assets/img/Jakub_Kurcek.jpg',
+    name: 'Jakub Kurcek',
+    company: 'Atlassian',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/jakub-kurcek-3b61a462/' }]
+  },
+  {
+    avatar: 'assets/img/Feico_Mol.png',
+    name: 'Feico Mol',
+    company: 'Atlassian',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/feicomol/' }]
+  },
+  {
+    avatar: 'assets/img/Serhat_Can.jpg',
+    name: 'Serhat Can',
+    company: 'OpsGenie',
+    socialMedia: [
+      { name: 'linkedIn', link: 'https://www.linkedin.com/in/serhatcan' },
+      { name: 'twitter', link: 'https://twitter.com/srhtcn' }
+    ]
+  },
+  {
+    avatar: 'assets/img/Robert_Swiderski.jpg',
+    name: 'Robert Świderski',
+    company: 'LOT',
+    socialMedia: [
+      { name: 'linkedIn', link: 'https://www.linkedin.com/in/robert-świderski-6a32a2108/' }
+    ]
+  },
+  {
+    avatar: 'assets/img/Tarun_Sapra.jpg',
+    name: 'Tarun Sapra',
+    company: '',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/tsapra/' }]
+  },
+  {
+    avatar: 'assets/img/Hubert_Rzyha.jpg',
+    name: 'Hubert Rzyha',
+    company: '',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/hubertrzyha/' }]
+  },
+  {
+    avatar: 'assets/img/Bogdan_Gorka.jpg',
+    name: 'Bogdan Górka',
+    company: '',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/bgorka/' }]
+  },
+  {
+    avatar: 'assets/img/ArturKarpisz.jpg',
+    name: 'Artur Karpisz',
+    company: 'Alior Bank',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/artur-karpisz-829ba594' }]
+  },
+  {
+    avatar: 'assets/img/Tanya_Gordon.jpg',
+    name: 'Tanya Gordon',
+    company: 'HP',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/gordontanya1/' }]
+  },
+  {
+    avatar: 'assets/img/tom_harris.jpg',
+    name: 'Tom Harris',
+    company: '',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/imtomharris' }]
+  },
+  {
+    avatar: 'assets/img/Chumski.jpg',
+    name: 'Paweł Chumski',
+    company: 'Fujitsu',
+    socialMedia: [
+      { name: 'linkedIn', link: 'https://www.linkedin.com/in/paweł-chumski-318088131/' }
+    ]
+  },
+  {
+    avatar: 'assets/img/Łukasz_Krupa.jpg',
+    name: 'Łukasz Krupa',
+    company: 'Deviniti',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/łukasz-krupa-1383b0a4/' }]
+  },
+  {
+    avatar: 'assets/img/placeholderAvatar.svg',
+    name: 'Marcin Skwara',
+    company: 'Link4',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/marcin-skwara/' }]
+  },
+  {
+    avatar: 'assets/img/Tom_Kucharski.jpg',
+    name: 'Tom Kucharski',
+    company: 'Software Plant',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/kucharski/' }]
+  },
+  {
+    avatar: 'assets/img/Zihni_Saglam.png',
+    name: 'Zihni Saglam',
+    company: 'Riada',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/zihni-saglam/' }]
+  },
+  {
+    avatar: 'assets/img/Karen_Schiekel.jpg',
+    name: 'Karen Schiekel',
+    company: 'Communardo',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/karen-schiekel/' }]
+  },
+  {
+    avatar: 'assets/img/placeholderAvatar.svg',
+    name: 'Tobias Theobald',
+    company: 'resolution GmbH',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/tobias-theobald/' }]
+  },
+  {
+    avatar: 'assets/img/Janis_Plume.png',
+    name: 'Jānis Plūme',
+    company: 'EazyBI',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/janis-plume-0943a617/' }]
+  },
+  {
+    avatar: 'assets/img/Julia_Skoursky.PNG',
+    name: 'Julia Skoursky',
+    company: 'ALM Works',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/juliakoz/' }]
+  },
+  {
+    avatar: 'assets/img/placeholderAvatar.svg',
+    name: 'Eugene Sokhransky',
+    company: 'ALM Works',
+    socialMedia: [
+      { name: 'linkedIn', link: 'https://www.linkedin.com/in/eugene-sokhransky-80384831/' }
+    ]
+  },
+  {
+    avatar: 'assets/img/Genevieve_Blanch.JPG',
+    name: 'Genevieve Blanch',
+    company: 'RefinedWiki',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/genevieveblanch/' }]
+  },
+  {
+    avatar: 'assets/img/Pawel_Mazur.jpg',
+    name: 'Pawel Mazur',
+    company: 'Spartez',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/jacekwizmurszymczak/' }]
+  },
+  {
+    avatar: 'assets/img/Jacek_Wizmur.jpg',
+    name: 'Jacek Wizmur',
+    company: 'Spartez',
+    socialMedia: [
+      { name: 'linkedIn', link: 'https://www.linkedin.com/in/pawe%C5%82-mazur-906638124/' }
+    ]
+  },
+  {
+    avatar: 'assets/img/placeholderAvatar.svg',
+    name: 'Jorge Merino',
+    company: 'Comalatech',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/merinojmp/Jorge' }]
+  },
+  {
+    avatar: 'assets/img/placeholderAvatar.svg',
+    name: 'Vadim Rutkevich',
+    company: 'StiltSoft',
+    socialMedia: [
+      { name: 'linkedIn', link: 'https://www.linkedin.com/in/vadim-rutkevich-60015070/' }
+    ]
+  },
+  {
+    avatar: 'assets/img/placeholderAvatar.svg',
+    name: 'Natalie Paramonova',
+    company: 'StiltSoft',
+    socialMedia: [
+      { name: 'linkedIn', link: 'https://www.linkedin.com/in/natalie-paramonova-891361114/' }
+    ]
+  },
+  {
+    avatar: 'assets/img/Joe_McFarlane.jpg',
+    name: 'Joe McFarlane',
+    company: 'LucidChart',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/josephmcfarlane/' }]
+  },
+  {
+    avatar: 'assets/img/Kasia_Pawlak.png',
+    name: 'Katarzyna Pawlak',
+    company: 'Deviniti',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/katarzynazofiapawlak/' }]
+  },
+  {
+    avatar: 'assets/img/natalia.korybska.png',
+    name: 'Natalia Korybska',
+    company: 'Deviniti',
+    socialMedia: [
+      { name: 'linkedIn', link: 'https://www.linkedin.com/in/natalia-korybska-7a97b3154/' }
+    ]
+  },
+  {
+    avatar: 'assets/img/Jarek_Solecki.png',
+    name: 'Jarosław Solecki',
+    company: 'Deviniti',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/jareksolecki/' }]
+  },
+  {
+    avatar: 'assets/img/placeholderAvatar.svg',
+    name: 'Michał Sztuka',
+    company: 'Deviniti',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/michal-sztuka/' }]
+  },
+  {
+    avatar: 'assets/img/Radosław_Cichocki.png',
+    name: 'Radosław Cichocki',
+    company: 'Deviniti',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/rcichocki/' }]
+  },
+  {
+    avatar: 'assets/img/Bogusław_Osuch.png',
+    name: 'Bogusław Osuch',
+    company: 'Deviniti',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/bosuch/' }]
+  }
+]);
+
 
 /***/ }),
 /* 198 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
-    if(false) {
-      // 1553075767855
-      var cssReload = require("!../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
-      module.hot.dispose(cssReload);
-      module.hot.accept(undefined, cssReload);;
-    }
-  
+"use strict";
+const gold = [
+  { image: 'assets/img/riada.png', name: 'riada' },
+  { image: 'assets/img/SP.png', name: 'softwareplant' },
+  { image: 'assets/img/communardo.png', name: 'communardo' },
+  { image: 'assets/img/resolution.png', name: 'resolution' },
+  { image: 'assets/img/eazyBi.png', name: 'eazyBi' }
+];
+/* harmony export (immutable) */ __webpack_exports__["a"] = gold;
+
+
+const silver = [
+  { image: 'assets/img/aalmworks.png', name: 'aalmworks' },
+  { image: 'assets/img/refinedwiki.png', name: 'refinedwiki' },
+  { image: 'assets/img/spartez.png', name: 'spartez' },
+  { image: 'assets/img/tempo.png', name: 'tempo' },
+  { image: 'assets/img/comalatech.png', name: 'comalatech' },
+  { image: 'assets/img/stillsoft.png', name: 'stillsoft' },
+  { image: 'assets/img/deiser.png', name: 'deiser' },
+  { image: 'assets/img/k15t.png', name: 'k15t' },
+  { image: 'assets/img/metainf.png', name: 'metainf' },
+  { image: 'assets/img/lucidchart.png', name: 'lucidchart' }
+];
+/* harmony export (immutable) */ __webpack_exports__["b"] = silver;
+
+
 
 /***/ }),
 /* 199 */
@@ -34151,7 +34437,33 @@ const step4 = {
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1553075769394
+      // 1553099029351
+      var cssReload = require("!../../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
+      module.hot.dispose(cssReload);
+      module.hot.accept(undefined, cssReload);;
+    }
+  
+
+/***/ }),
+/* 200 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// removed by extract-text-webpack-plugin
+    if(false) {
+      // 1553099029338
+      var cssReload = require("!../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
+      module.hot.dispose(cssReload);
+      module.hot.accept(undefined, cssReload);;
+    }
+  
+
+/***/ }),
+/* 201 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// removed by extract-text-webpack-plugin
+    if(false) {
+      // 1553099030812
       var cssReload = require("!../node_modules/css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
