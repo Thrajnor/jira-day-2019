@@ -10760,11 +10760,25 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_2_vee_
 
 
 
+const dict = {
+  custom: {
+    email: {
+      required: 'Email is required for subscribing'
+    },
+    personalData: {
+      required: 'All consents are required'
+    },
+    electronicServices: {
+      required: 'All consents are required'
+    }
+  }
+};
+
 // countDown =================================
 
 new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   data: {
-    jiraDayDate: 1559120400000,
+    jiraDayDate: new Date(2019, 4, 29),
     hasJS: true,
     months: 0,
     days: 0,
@@ -10805,35 +10819,121 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   data() {
     return {
       hasJS: true,
-      step1: __WEBPACK_IMPORTED_MODULE_5_assets_sections_ticketForm_formFields_js__["a" /* step1 */],
-      step2: __WEBPACK_IMPORTED_MODULE_5_assets_sections_ticketForm_formFields_js__["b" /* step2 */],
-      step3: __WEBPACK_IMPORTED_MODULE_5_assets_sections_ticketForm_formFields_js__["c" /* step3 */],
-      step4: __WEBPACK_IMPORTED_MODULE_5_assets_sections_ticketForm_formFields_js__["d" /* step4 */]
+      submitted: false,
+      submitting: false,
+      steps: [__WEBPACK_IMPORTED_MODULE_5_assets_sections_ticketForm_formFields_js__["a" /* step1 */], __WEBPACK_IMPORTED_MODULE_5_assets_sections_ticketForm_formFields_js__["b" /* step2 */], __WEBPACK_IMPORTED_MODULE_5_assets_sections_ticketForm_formFields_js__["c" /* step3 */], __WEBPACK_IMPORTED_MODULE_5_assets_sections_ticketForm_formFields_js__["d" /* step4 */]]
     };
   },
+
+  watch: {
+    submitted: function() {
+      if (this.submitted) {
+        for (const step of this.steps) {
+          step.controlVisible = false;
+        }
+      } else {
+        for (const step of this.steps) {
+          step.controlVisible = true;
+        }
+      }
+    },
+    submitting: function() {
+      if (!this.submitted) {
+        if (this.submitting) {
+          for (const step of this.steps) {
+            step.controlVisible = false;
+          }
+        } else {
+          for (const step of this.steps) {
+            step.controlVisible = true;
+          }
+        }
+      }
+    }
+  },
+
   methods: {
+    focusOnFirstError: function() {
+      const errors = this.errors.collect();
+      const keys = Object.keys(errors);
+      const ref = keys[0];
+      if (this.$refs[ref]) {
+        this.$refs[ref][0].focus();
+      }
+    },
+    isStatusVisible: function(i, fieldNumber) {
+      const field = this.steps[i].fields[fieldNumber];
+      const scope = '$step' + (i + 1);
+      return (
+        !this.steps[i].disabled &&
+        this.fields[scope] &&
+        this.fields[scope][field.name].dirty &&
+        (field.value || !this.errors.has('step' + i + '.' + field.name))
+      );
+    },
     toggleInputs: function(stepNumber) {
-      const step = 'step' + stepNumber;
-      this[step].disabled = !this[step].disabled;
+      const step = this.steps[stepNumber];
+      step.disabled = !step.disabled;
     },
     onNext: function(stepNumber) {
-      const step = 'step' + stepNumber;
-      this.$validator.validateAll(step).then(r => {
+      const step = this.steps[stepNumber];
+      this.$validator.validateAll('step' + (stepNumber + 1)).then(r => {
         if (r) {
-          this[step].buttonVisible = !this[step].buttonVisible;
-          this[step].controlVisible = !this[step].controlVisible;
-          this['step' + (stepNumber + 1)].collapsed = true;
+          step.buttonVisible = !step.buttonVisible;
+          step.controlVisible = !step.controlVisible;
+          this.steps[stepNumber + 1].collapsed = true;
           this.toggleInputs(stepNumber);
+        } else {
+          this.focusOnFirstError();
         }
       });
     },
-    onSubmit: function() {
-      this.$validator.validateAll().then(r => {
-        if (r) {
-          console.log('submit');
-          console.log(r);
+    focusNext: function(ref, step) {
+      if (ref) {
+        this.$refs[ref.name][0].focus();
+      } else {
+        this.onNext(step);
+      }
+    },
+    validateAllSteps: function() {
+      let validations = [];
+      for (const step in this.steps) {
+        if (this.submitting) {
+          validations.push(
+            this.$validator.validateAll(`step${Number(step) + 1}`).then(r => {
+              if (!r) {
+                this.submitting = false;
+              }
+              return r;
+            })
+          );
         }
-      });
+      }
+      return Promise.all(validations).then(results => results.every(r => r));
+    },
+    onSubmit: function() {
+      if (!this.submitted && !this.submitting) {
+        this.submitting = true;
+
+        this.validateAllSteps().then(r => {
+          console.log(r);
+          if (r && this.submitting) {
+            this.submitting = false;
+            this.submitted = true;
+            this.toggleInputs(this.steps.length - 1);
+            console.log('submit');
+          } else {
+            this.submitting = false;
+            this.focusOnFirstError();
+          }
+        });
+      } else if (this.submitting) {
+        // error todo
+        console.log('form is submitting');
+      } else if (this.submitted) {
+        // error todo
+        console.log('form is already submited');
+      }
     }
   }
 });
@@ -10960,6 +11060,60 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     }
   }
 });
+
+// Write =================================
+
+new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
+  data: {
+    hasJS: true,
+    submitted: false,
+    submitting: false,
+    emailSender: {
+      email: {
+        value: '',
+        name: 'email',
+        reqs: 'required'
+      },
+      consent1: {
+        name: 'personalData',
+        reqs: 'required'
+      },
+      consent2: {
+        name: 'electronicServices',
+        reqs: 'required'
+      }
+    }
+  },
+
+  created() {
+    this.$validator.localize('en', dict);
+  },
+
+  methods: {
+    onSubmit: function() {
+      if (!this.submitted && !this.submitting) {
+        this.submitting = true;
+
+        this.$validator.validateAll('emailSender').then(r => {
+          console.log(r);
+          if (r && this.submitting) {
+            this.submitting = false;
+            this.submitted = true;
+            console.log('submit');
+          } else {
+            this.submitting = false;
+          }
+        });
+      } else if (this.submitting) {
+        // error todo
+        console.log('form is submitting');
+      } else if (this.submitted) {
+        // error todo
+        console.log('form is already submited');
+      }
+    }
+  }
+}).$mount('#write');
 
 
 /***/ }),
@@ -33501,11 +33655,7 @@ const day1 = [
       time: '10:00 - 10:15',
       title: 'Official start of the JIRA DAY 2019 conference',
       speaker: 'Piotr Dorosz',
-      company: 'Deviniti',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      company: 'Deviniti'
     }
   ],
   [
@@ -33513,11 +33663,7 @@ const day1 = [
       time: '10:15 - 10:45',
       title: 'Atlassian - Keynote',
       speaker: 'Feico Mol',
-      company: 'Atlassian',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      company: 'Atlassian'
     }
   ],
   [
@@ -33528,7 +33674,8 @@ const day1 = [
       company: 'HP',
       extra: {
         toggle: false,
-        content: 'hello'
+        content:
+          'Atlassian was chosen as the tactical toolset to introduce and apply the LEAN methodology at HP. LEAN is not just a buzzword or a quick fix, but rather a strategy: a new way of thinking and running a company, which is beneficial to the line worker as to the CEO. The ultimate goal was to create the most value to the customer, while minimizing resources, time, energy and reducing waste. To achieve this, HP has traveled a unique and successful journey. I believe that sharing our journey would inspire others to choose Atlassian as their prime infrastructure to the whole product development process.'
       }
     }
   ],
@@ -33541,17 +33688,14 @@ const day1 = [
       company: 'Lionbridge',
       extra: {
         toggle: false,
-        content: 'hello'
+        content:
+          'We translate content into 90+ languages for a technology giant. We manage production work in the follow-the-sun model from Beijing to Seattle. We select linguists and distribute work automatically to our 1100+ community members around the globe. Come and see how we’ve achieved that using Jira!'
       }
     },
     {
       title: 'Tackle the Chaos with Categories for Bitbucket',
       speaker: 'Karen Schiekel',
-      company: 'Communardo',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      company: 'Communardo'
     },
     {
       title: 'How we implement and use JIRA Service Desk in Żabka',
@@ -33559,7 +33703,8 @@ const day1 = [
       company: 'Żabka Polska',
       extra: {
         toggle: false,
-        content: 'hello'
+        content:
+          "Are you curious how connect many service desk teams in one customer portal? I will talk about the implementatio n of JIRA Service Desk in Żabka. I'll describe how teams work and explain why we decided on this solution. I will present the technicals details, difficulties and dangers what we faced during implementatio n. Also I want show how it all looks from the customer's perspective (communicatio n and raising issues)."
       }
     }
   ],
@@ -33571,16 +33716,13 @@ const day1 = [
       company: 'Atlassian',
       extra: {
         toggle: false,
-        content: 'hello'
+        content:
+          'Atlassian product managers will walk us through the latest changes in Jira and Portfolio.'
       }
     },
     {
       title: 'Project reporting for Jira',
-      speaker: 'EazyBI',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      speaker: 'EazyBI'
     },
     {
       title:
@@ -33589,7 +33731,8 @@ const day1 = [
       company: 'LOT',
       extra: {
         toggle: false,
-        content: 'hello'
+        content:
+          'How to use JIRA in different environments - JIRA Service Desk as a „flights reports” and „crew requests” software in LOT Polish Airlines.'
       }
     }
   ],
@@ -33601,17 +33744,14 @@ const day1 = [
       company: 'London AUG Leader',
       extra: {
         toggle: false,
-        content: 'hello'
+        content:
+          'Tom from the London Atlassian User Group will discuss how to give 5 support agents the power of 50. With three different options and step by step advice on how to automate many of the tasks that make a support agent’s life a chore.'
       }
     },
     {
       title: 'Getting the most out of your Enterprise Service Management solution.',
       speaker: 'Zihni Saglam',
-      company: 'Riada',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      company: 'Riada'
     },
     {
       title: 'Od pomysłu i projektu do utrzymania w JIRA Service Desk (PL)',
@@ -33619,7 +33759,8 @@ const day1 = [
       company: 'Alior Bank',
       extra: {
         toggle: false,
-        content: 'hello'
+        content:
+          '- Wyzwania w realizacji procesu projektowego w JIRA i JIRA Service Desk.\n- Programiści, administratorzy – prawa autorskie w JIRA Service Desk.\n- Wnioski JIRA Service Desk w procesie projektowym – optymalizacja formatek, akceptacje zespołowe i równoległe, integracja z innymi systemami.\n- Monitorowanie i zbieranie informacji na karcie projektu'
       }
     }
   ],
@@ -33632,17 +33773,14 @@ const day1 = [
       company: 'OpsGenie',
       extra: {
         toggle: false,
-        content: 'hello'
+        content:
+          'Good uptime and performance is a must for modern software. We know that cost of these failure are tremendous but we (must) fail all the time. It is our job as developers of these systems to ensure that we can bring the system back into a healthy state in the least possible time. And Opsgenie can help you with that! Opsgenie is a modern incident management platform for operating always on services, empowering dev & ops teams to plan for service disruptions and stay in control during incidents. This talk is about the newest addition of Atlassian family and how it helps unleash the potential of on-call teams. We are going to start with some basics and cover the importance of good on-call and incident response practices. We will cover Opsgenie’s core features and see how Opsgenie integrates with other Atlassian tools like Jira, JSD, and Statuspage.'
       }
     },
     {
       title: 'Jira is from Mars, Users Are from Venus - How to Work Together on Earth?',
       speaker: 'Katarzyna Pawlak',
-      company: 'Deviniti',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      company: 'Deviniti'
     },
     {
       title: 'Meeting customers needs – workflow possibilities in Jira.',
@@ -33650,7 +33788,8 @@ const day1 = [
       company: 'Fujitsu',
       extra: {
         toggle: false,
-        content: 'hello'
+        content:
+          'Short presentation about filling costommer’s needs with workflow possibilities. Conditions, validators, postfunctins.'
       }
     }
   ],
@@ -33662,16 +33801,13 @@ const day1 = [
       company: 'Atlassian',
       extra: {
         toggle: false,
-        content: 'hello'
+        content:
+          'A complete walkthrough on the history behind Data Center. We will tell you the story how it begun, for who we built it, how it evolved and what direction we are moving with it.'
       }
     },
     {
       title: 'Free your content with Refined',
-      speaker: 'Refined Wiki',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      speaker: 'Refined Wiki'
     },
     {
       title: 'Demystifying Jira Cloud',
@@ -33679,7 +33815,8 @@ const day1 = [
       company: 'Ingenico Group',
       extra: {
         toggle: false,
-        content: 'hello'
+        content:
+          "A lot of new features have been added to the Jira cloud recently, whether it's new the UI, Next- gen projects, Incident management.This talk aims to delve deeper into these features, especially covering all the pros and cons from an end- user perspective and how the agile teams can get up to speed with these new features.We will look into all the new next - gen project features like roadmaps, feature toggle, incident management project templates and their integration with Ops genie.How we can now with Jira cloud streamline our incident management process in oneplace and involve all the relevant stakeholders in a single Jira issue view instead of sending emails to individual teams."
       }
     }
   ],
@@ -33692,16 +33829,13 @@ const day1 = [
       company: 'Deviniti',
       extra: {
         toggle: false,
-        content: 'hello'
+        content:
+          "JIRA as a process oriented tool often need to communicate with many other applications to facilitate and automate your processes. The answer is EASY, you need an INTERATION ...but 'easy integration' is an oxymoron. So how to approach to an integration in most efficient way? What is working, what is not and when? Get know ABC of application integrations to understand architectural decision."
       }
     },
     {
       title: 'Successfully Scaling Communication Methods & Systems',
-      speaker: 'LucidChart',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      speaker: 'LucidChart'
     },
     {
       title:
@@ -33709,7 +33843,8 @@ const day1 = [
       speaker: 'Hubert Rzyha',
       extra: {
         toggle: false,
-        content: 'hello'
+        content:
+          'The aim is to show proces of projects migration between various JIRA instances, keeping all possible comments, etc. Showing what problems you need to deal with both technical and business in a global organization. Best pracites and step by step guidance.'
       }
     }
   ],
@@ -33721,16 +33856,13 @@ const day1 = [
       company: 'Deviniti',
       extra: {
         toggle: false,
-        content: 'hello'
+        content:
+          "Clients who decide to introduce Atlassian technology in their organizations are rarely aware and prepared for what it takes to implement Jira and how it will impact their company culture in the long run. During this presentation, you will learn about a few most common pitfalls one can fall into during Jira implementatio ns and how to avoid them. The presenter has spent the last few years in the Jira greenfield implementation 'trenches' and will share with you his insights of working with business and technical teams meeting Jira for the first time."
       }
     },
     {
       title: 'Discover Tempo Apps for Jira',
-      speaker: 'Tempo',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      speaker: 'Tempo'
     },
     {
       title: 'Synchronization in Jira (PL)',
@@ -33738,7 +33870,8 @@ const day1 = [
       company: 'Link4',
       extra: {
         toggle: false,
-        content: 'hello'
+        content:
+          'I will talk about what synchronization is and how the Issue SYNC addon can be used for it. You will learn about use cases as well as good and bad practices in its configuration.'
       }
     }
   ],
@@ -33750,16 +33883,13 @@ const day1 = [
       company: 'Atlassian',
       extra: {
         toggle: false,
-        content: 'hello'
+        content:
+          'Learn more on how we fix bugs in Jira. We will walk you through the process we use to decide on which bugs to prioritise.'
       }
     },
     {
       title: 'Document management in Jira and Confluence',
-      speaker: 'Stiltsoft',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      speaker: 'Stiltsoft'
     },
     {}
   ],
@@ -33773,37 +33903,21 @@ const day2 = [
     {
       time: '09:00 - 10:30',
       title: 'SAFe, Waterfall and hybrid project management in Jira',
-      speaker: 'Software Plant',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      speaker: 'Software Plant'
     },
     {
       title: 'Riada - A demo of the Insight and Insight Discovery.',
-      speaker: 'Zihni Saglam',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      speaker: 'Zihni Saglam'
     },
     {
       time: '09:00 - 09:45',
       title: 'Creating handy Jira dashboards and reports in Atlassian Confluence',
-      speaker: 'StiltSoft',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      speaker: 'StiltSoft'
     },
     {
       title: 'A step-by-step method for effectively implementing Jira Service Desk',
       speaker: 'Radosław Cichocki',
-      company: 'Deviniti',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      company: 'Deviniti'
     }
   ],
   [
@@ -33812,20 +33926,12 @@ const day2 = [
     {
       time: '10:00 - 10:45',
       title: 'The Power of Visual Communication within Jira & Confluence',
-      speaker: 'Lucidchart',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      speaker: 'Lucidchart'
     },
     {
       title:
         'How much do you know about your Jira projects? Build a project central with Profields and unleash business decisions',
-      speaker: 'Deiser',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      speaker: 'Deiser'
     }
   ],
   [{ time: '10:30 - 11:00', title: 'Coffee Break', whole: true }],
@@ -33833,40 +33939,24 @@ const day2 = [
     {
       time: '11:00 - 12:30',
       title: 'Reporting on Jira for different teams and basic functionality of eazyBI',
-      speaker: 'eazyBI',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      speaker: 'eazyBI'
     },
     {
       title: 'How to structure and personalize your wiki with Metadata for Confluence',
       speaker: 'Karen Schiekel',
-      company: 'Communardo',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      company: 'Communardo'
     },
     {
       time: '11:00 - 11:45',
       title:
         'How does TestFLO support its own development. Testing process and test automation examples.',
       speaker: 'Bogusław Osuch',
-      company: 'Deviniti',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      company: 'Deviniti'
     },
     {
       title:
         'How to take control of your company’s assets, equipment and tools with Asset Tracker for Jira',
-      speaker: 'Spartez',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      speaker: 'Spartez'
     }
   ],
   [
@@ -33875,20 +33965,12 @@ const day2 = [
     {
       time: '12:00 - 12:45',
       title: 'From time tracking to resource management: Improving Jira with Tempo apps',
-      speaker: 'Tempo',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      speaker: 'Tempo'
     },
     {
       title: 'Implementing SAFe with Jira and Structure',
       speaker: 'Eugene Sokhransky',
-      company: 'ALM Works',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      company: 'ALM Works'
     }
   ],
   [{ time: '12:30 - 14:00', title: 'Lunch Break', whole: true }],
@@ -33896,39 +33978,23 @@ const day2 = [
     {
       time: '14:00 - 15:30',
       title: 'Single Sign On Deep Dive - E asy Integration with Atlassian Apps',
-      speaker: 'Resolution',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      speaker: 'Resolution'
     },
     {
       title: 'Navigating the Road to Document Control',
       speaker: 'Jorge Merino',
-      company: 'Comalatech',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      company: 'Comalatech'
     },
     {
       time: '14:00 - 14:45',
       title: 'Investigate requirements and test products like Sherlock Holmes (PL)',
       speaker: 'Natalia Korybska, Jarosław Solecki',
-      company: 'Deviniti',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      company: 'Deviniti'
     },
     {
       title:
         'Transform Jira and Confluence into your own branded, easy to navigate, customizable site',
-      speaker: 'RefinedWiki',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      speaker: 'RefinedWiki'
     }
   ],
   [
@@ -33936,29 +34002,17 @@ const day2 = [
     {
       spacer: true,
       title: 'So Long, Silos! How to Better Manage Your Documents in Confluence.',
-      speaker: 'K15t',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      speaker: 'K15t'
     },
     {
       time: '15:00 - 15:45',
       title: 'How to mix a delicious cocktail from Jira and Email? (extended version)',
-      speaker: 'META-INF',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      speaker: 'META-INF'
     },
     {
       title: 'Become the Andy Warhol of your Customer Portal (PL)',
       speaker: 'Katarzyna Pawlak, Michał Sztuka',
-      company: 'Deviniti',
-      extra: {
-        toggle: false,
-        content: 'hello'
-      }
+      company: 'Deviniti'
     }
   ],
   [{ time: '16:00 - 16:30', title: 'Closing note with price lottery', whole: true }]
@@ -33973,8 +34027,9 @@ const day2 = [
 
 "use strict";
 const step1 = {
+  name: 'Basic data',
   disabled: false,
-  collapsed: false,
+  collapsed: true,
   buttonVisible: true,
   controlVisible: false,
   fields: [
@@ -34000,6 +34055,7 @@ const step1 = {
 
 
 const step2 = {
+  name: 'Company data',
   disabled: false,
   collapsed: false,
   buttonVisible: true,
@@ -34016,6 +34072,7 @@ const step2 = {
 
 
 const step3 = {
+  name: 'Billing information',
   disabled: false,
   collapsed: false,
   buttonVisible: true,
@@ -34032,6 +34089,7 @@ const step3 = {
 
 
 const step4 = {
+  name: 'Summary',
   disabled: false,
   collapsed: false,
   buttonVisible: true,
@@ -34054,11 +34112,10 @@ const step4 = {
 
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ([
-  'assets/img/photo1.png',
-  'assets/img/photo2.png',
-  'assets/img/photo3.png',
-  'assets/img/photo4.png',
-  'assets/img/photo5.png'
+  'assets/sections/howItWas/gallery_1.png',
+  'assets/sections/howItWas/gallery_2.png',
+  'assets/sections/howItWas/gallery_3.png',
+  'assets/sections/howItWas/gallery_4.png'
 ]);
 
 
@@ -34068,7 +34125,7 @@ const step4 = {
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1552933458632
+      // 1553075767870
       var cssReload = require("!../../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -34081,7 +34138,7 @@ const step4 = {
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1552933458617
+      // 1553075767855
       var cssReload = require("!../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -34094,7 +34151,7 @@ const step4 = {
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1552933460195
+      // 1553075769394
       var cssReload = require("!../node_modules/css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
