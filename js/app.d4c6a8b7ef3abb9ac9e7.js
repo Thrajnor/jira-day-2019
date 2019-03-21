@@ -34478,18 +34478,18 @@ const step4 = {
 
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ([
-  'jira-day-2019-test/assets/img/gallery_1.jpg',
-  'jira-day-2019-test/assets/img/gallery_2.jpg',
-  'jira-day-2019-test/assets/img/gallery_3.jpg',
-  'jira-day-2019-test/assets/img/gallery_4.jpg',
-  'jira-day-2019-test/assets/img/gallery_5.jpg',
-  'jira-day-2019-test/assets/img/gallery_6.jpg',
-  'jira-day-2019-test/assets/img/gallery_7.jpg',
-  'jira-day-2019-test/assets/img/gallery_8.jpg',
-  'jira-day-2019-test/assets/img/gallery_9.jpg',
-  'jira-day-2019-test/assets/img/gallery_10.jpg',
-  'jira-day-2019-test/assets/img/gallery_11.jpg',
-  'jira-day-2019-test/assets/img/gallery_12.jpg'
+  'assets/img/gallery_1.jpg',
+  'assets/img/gallery_2.jpg',
+  'assets/img/gallery_3.jpg',
+  'assets/img/gallery_4.jpg',
+  'assets/img/gallery_5.jpg',
+  'assets/img/gallery_6.jpg',
+  'assets/img/gallery_7.jpg',
+  'assets/img/gallery_8.jpg',
+  'assets/img/gallery_9.jpg',
+  'assets/img/gallery_10.jpg',
+  'assets/img/gallery_11.jpg',
+  'assets/img/gallery_12.jpg'
 ]);
 
 
@@ -34500,7 +34500,7 @@ const step4 = {
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ([
   {
-    avatar: 'jira-day-2019-test/assets/img/Michal_Cieslak.jpg',
+    avatar: 'assets/img/Michal_Cieslak.jpg',
     name: 'Michał Cieślak',
     company: 'Lionbridge',
     socialMedia: [
@@ -34508,37 +34508,37 @@ const step4 = {
     ]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Michal_Warkocz.jpg',
+    avatar: 'assets/img/Michal_Warkocz.jpg',
     name: 'Michał Warkocz',
     company: 'Atlassian',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/michal-warkocz/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Ilya_Zinoviev.jpg',
+    avatar: 'assets/img/Ilya_Zinoviev.jpg',
     name: 'Ilya Zinoviev',
     company: 'Atlassian',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/ilya-zinoviev-49581271/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Gosia_Gulagowska.jpg',
+    avatar: 'assets/img/Gosia_Gulagowska.jpg',
     name: 'Małgorzata Gułgowska-Kowalska',
     company: 'Atlassian',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/malgorzatagulgowska/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Jakub_Kurcek.jpg',
+    avatar: 'assets/img/Jakub_Kurcek.jpg',
     name: 'Jakub Kurcek',
     company: 'Atlassian',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/jakub-kurcek-3b61a462/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Feico_Mol.png',
+    avatar: 'assets/img/Feico_Mol.png',
     name: 'Feico Mol',
     company: 'Atlassian',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/feicomol/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Serhat_Can.jpg',
+    avatar: 'assets/img/Serhat_Can.jpg',
     name: 'Serhat Can',
     company: 'OpsGenie',
     socialMedia: [
@@ -34547,7 +34547,7 @@ const step4 = {
     ]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Robert_Swiderski.jpg',
+    avatar: 'assets/img/Robert_Swiderski.jpg',
     name: 'Robert Świderski',
     company: 'LOT',
     socialMedia: [
@@ -34555,43 +34555,43 @@ const step4 = {
     ]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Tarun_Sapra.jpg',
+    avatar: 'assets/img/Tarun_Sapra.jpg',
     name: 'Tarun Sapra',
     company: '',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/tsapra/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Hubert_Rzyha.jpg',
+    avatar: 'assets/img/Hubert_Rzyha.jpg',
     name: 'Hubert Rzyha',
     company: '',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/hubertrzyha/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Bogdan_Gorka.jpg',
+    avatar: 'assets/img/Bogdan_Gorka.jpg',
     name: 'Bogdan Górka',
     company: '',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/bgorka/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/ArturKarpisz.jpg',
+    avatar: 'assets/img/ArturKarpisz.jpg',
     name: 'Artur Karpisz',
     company: 'Alior Bank',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/artur-karpisz-829ba594' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Tanya_Gordon.jpg',
+    avatar: 'assets/img/Tanya_Gordon.jpg',
     name: 'Tanya Gordon',
     company: 'HP',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/gordontanya1/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/tom_harris.jpg',
+    avatar: 'assets/img/tom_harris.jpg',
     name: 'Tom Harris',
     company: 'London AUG Leader',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/imtomharris' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Chumski.jpg',
+    avatar: 'assets/img/Chumski.jpg',
     name: 'Paweł Chumski',
     company: 'Fujitsu',
     socialMedia: [
@@ -34599,55 +34599,55 @@ const step4 = {
     ]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/lukasz_Krupa.jpg',
+    avatar: 'assets/img/lukasz_Krupa.jpg',
     name: 'Łukasz Krupa',
     company: 'Deviniti',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/łukasz-krupa-1383b0a4/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Marcin_Skwara.jpg',
+    avatar: 'assets/img/Marcin_Skwara.jpg',
     name: 'Marcin Skwara',
     company: 'Link4',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/marcin-skwara/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Tom_Kucharski.jpg',
+    avatar: 'assets/img/Tom_Kucharski.jpg',
     name: 'Tom Kucharski',
     company: 'Software Plant',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/kucharski/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Zihni_Saglam.png',
+    avatar: 'assets/img/Zihni_Saglam.png',
     name: 'Zihni Saglam',
     company: 'Riada',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/zihni-saglam/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Karen_Schiekel.jpg',
+    avatar: 'assets/img/Karen_Schiekel.jpg',
     name: 'Karen Schiekel',
     company: 'Communardo',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/karen-schiekel/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Tobias_Theobald.jpg',
+    avatar: 'assets/img/Tobias_Theobald.jpg',
     name: 'Tobias Theobald',
     company: 'resolution GmbH',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/tobias-theobald/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Janis_Plume.png',
+    avatar: 'assets/img/Janis_Plume.png',
     name: 'Jānis Plūme',
     company: 'EazyBI',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/janis-plume-0943a617/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Julia_Skoursky.PNG',
+    avatar: 'assets/img/Julia_Skoursky.PNG',
     name: 'Julia Skoursky',
     company: 'ALM Works',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/juliakoz/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Eugene_Sokhransky.jpg',
+    avatar: 'assets/img/Eugene_Sokhransky.jpg',
     name: 'Eugene Sokhransky',
     company: 'ALM Works',
     socialMedia: [
@@ -34655,19 +34655,19 @@ const step4 = {
     ]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Genevieve_Blanch.JPG',
+    avatar: 'assets/img/Genevieve_Blanch.JPG',
     name: 'Genevieve Blanch',
     company: 'RefinedWiki',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/genevieveblanch/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Pawel_Mazur.jpg',
+    avatar: 'assets/img/Pawel_Mazur.jpg',
     name: 'Pawel Mazur',
     company: 'Spartez',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/jacekwizmurszymczak/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Jacek_Wizmur.jpg',
+    avatar: 'assets/img/Jacek_Wizmur.jpg',
     name: 'Jacek Wizmur',
     company: 'Spartez',
     socialMedia: [
@@ -34675,13 +34675,13 @@ const step4 = {
     ]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Jorge_Merino.jpg',
+    avatar: 'assets/img/Jorge_Merino.jpg',
     name: 'Jorge Merino',
     company: 'Comalatech',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/merinojmp/Jorge' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Vadim_Rutkevich.jpg',
+    avatar: 'assets/img/Vadim_Rutkevich.jpg',
     name: 'Vadim Rutkevich',
     company: 'StiltSoft',
     socialMedia: [
@@ -34689,7 +34689,7 @@ const step4 = {
     ]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Natalie_Paramonova.jpg',
+    avatar: 'assets/img/Natalie_Paramonova.jpg',
     name: 'Natalie Paramonova',
     company: 'StiltSoft',
     socialMedia: [
@@ -34697,7 +34697,7 @@ const step4 = {
     ]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Sebastian_Krzewinski.jpg',
+    avatar: 'assets/img/Sebastian_Krzewinski.jpg',
     name: 'Sebastian Krzewiński',
     company: 'Żabka Polska sp. z o.o.',
     socialMedia: [
@@ -34705,19 +34705,19 @@ const step4 = {
     ]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Joe_McFarlane.jpg',
+    avatar: 'assets/img/Joe_McFarlane.jpg',
     name: 'Joe McFarlane',
     company: 'LucidChart',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/josephmcfarlane/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Kasia_Pawlak.png',
+    avatar: 'assets/img/Kasia_Pawlak.png',
     name: 'Katarzyna Pawlak',
     company: 'Deviniti',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/katarzynazofiapawlak/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/natalia.korybska.png',
+    avatar: 'assets/img/natalia.korybska.png',
     name: 'Natalia Korybska',
     company: 'Deviniti',
     socialMedia: [
@@ -34725,25 +34725,25 @@ const step4 = {
     ]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Jarek_Solecki.png',
+    avatar: 'assets/img/Jarek_Solecki.png',
     name: 'Jarosław Solecki',
     company: 'Deviniti',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/jareksolecki/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Michal_Sztuka.jpg',
+    avatar: 'assets/img/Michal_Sztuka.jpg',
     name: 'Michał Sztuka',
     company: 'Deviniti',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/michal-sztuka/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Radoslaw_Cichocki.png',
+    avatar: 'assets/img/Radoslaw_Cichocki.png',
     name: 'Radosław Cichocki',
     company: 'Deviniti',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/rcichocki/' }]
   },
   {
-    avatar: 'jira-day-2019-test/assets/img/Boguslaw_Osuch.png',
+    avatar: 'assets/img/Boguslaw_Osuch.png',
     name: 'Bogusław Osuch',
     company: 'Deviniti',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/bosuch/' }]
@@ -34757,26 +34757,26 @@ const step4 = {
 
 "use strict";
 const gold = [
-  { image: 'jira-day-2019-test/assets/img/riada.png', name: 'riada' },
-  { image: 'jira-day-2019-test/assets/img/SP.png', name: 'softwareplant' },
-  { image: 'jira-day-2019-test/assets/img/communardo.png', name: 'communardo' },
-  { image: 'jira-day-2019-test/assets/img/resolution.png', name: 'resolution' },
-  { image: 'jira-day-2019-test/assets/img/eazyBi.png', name: 'eazyBi' }
+  { image: 'assets/img/riada.png', name: 'riada' },
+  { image: 'assets/img/SP.png', name: 'softwareplant' },
+  { image: 'assets/img/communardo.png', name: 'communardo' },
+  { image: 'assets/img/resolution.png', name: 'resolution' },
+  { image: 'assets/img/eazyBi.png', name: 'eazyBi' }
 ];
 /* harmony export (immutable) */ __webpack_exports__["a"] = gold;
 
 
 const silver = [
-  { image: 'jira-day-2019-test/assets/img/aalmworks.png', name: 'aalmworks' },
-  { image: 'jira-day-2019-test/assets/img/refinedwiki.png', name: 'refinedwiki' },
-  { image: 'jira-day-2019-test/assets/img/spartez.png', name: 'spartez' },
-  { image: 'jira-day-2019-test/assets/img/tempo.png', name: 'tempo' },
-  { image: 'jira-day-2019-test/assets/img/comalatech.png', name: 'comalatech' },
-  { image: 'jira-day-2019-test/assets/img/stillsoft.png', name: 'stillsoft' },
-  { image: 'jira-day-2019-test/assets/img/deiser.png', name: 'deiser' },
-  { image: 'jira-day-2019-test/assets/img/k15t.png', name: 'k15t' },
-  { image: 'jira-day-2019-test/assets/img/metainf.png', name: 'metainf' },
-  { image: 'jira-day-2019-test/assets/img/lucidchart.png', name: 'lucidchart' }
+  { image: 'assets/img/aalmworks.png', name: 'aalmworks' },
+  { image: 'assets/img/refinedwiki.png', name: 'refinedwiki' },
+  { image: 'assets/img/spartez.png', name: 'spartez' },
+  { image: 'assets/img/tempo.png', name: 'tempo' },
+  { image: 'assets/img/comalatech.png', name: 'comalatech' },
+  { image: 'assets/img/stillsoft.png', name: 'stillsoft' },
+  { image: 'assets/img/deiser.png', name: 'deiser' },
+  { image: 'assets/img/k15t.png', name: 'k15t' },
+  { image: 'assets/img/metainf.png', name: 'metainf' },
+  { image: 'assets/img/lucidchart.png', name: 'lucidchart' }
 ];
 /* harmony export (immutable) */ __webpack_exports__["b"] = silver;
 
