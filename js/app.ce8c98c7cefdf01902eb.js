@@ -10821,15 +10821,65 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
         '_blank',
         this.getWindow()
       );
+    },
+    openVK: function() {
+      window.open('http://vk.com/share.php?url=' + this.url, '_blank', this.getWindow());
     }
   }
 }).$mount('#socialMedia');
+
+new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
+  data: {
+    hasJS: true,
+    url: document.location.origin
+  },
+
+  created() {},
+
+  methods: {
+    getWindow: function() {
+      const width = 575;
+      const height = 400;
+      const left = (window.innerWidth - width) / 2;
+      const top = (window.innerHeight - height) / 2;
+      const opts =
+        'location=yes,status=1' +
+        ',width=' +
+        width +
+        ',height=' +
+        height +
+        ',top=' +
+        top +
+        ',left=' +
+        left;
+      return opts;
+    },
+    openTwitter: function() {
+      window.open(
+        'https://twitter.com/home?status=Are%20you%20interested%20in%20Jira%20Day%202019%20the%20largest%20conference%20in%20Central%20Europe?%20We%20have%20a%20good%20news%20for%20you%20-%20the%20tickets%20are%20available%20now%20till%205th%20of%20april!%20' +
+          this.url,
+        '_blank',
+        this.getWindow()
+      );
+    },
+    openFacebook: function() {
+      window.open(
+        'https://www.facebook.com/sharer/sharer.php?u=' + this.url + '%2F&amp;src=sdkpreparse',
+        '_blank',
+        this.getWindow()
+      );
+    },
+    openVK: function() {
+      window.open('http://vk.com/share.php?url=' + this.url, '_blank', this.getWindow());
+    }
+  }
+}).$mount('#download');
 
 // countDown =================================
 
 new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   data: {
-    jiraDayDate: new Date(2019, 4, 29),
+    jiraDayDate: new Date(2019, 4, 35),
     hasJS: true,
     months: 0,
     days: 0,
@@ -11024,12 +11074,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   },
 
   mounted: function() {
-    setTimeout(() => {
-      this.images = __WEBPACK_IMPORTED_MODULE_6_assets_sections_howItWas_images_js__["a" /* default */];
-      setTimeout(() => {
-        this.setPosition();
-      }, 200);
-    }, 1000);
+    this.addImages();
     window.addEventListener('resize', this.handleResize);
     this.$el
       .querySelector('.carouselContainer')
@@ -11050,6 +11095,18 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   },
 
   methods: {
+    addImages: function() {
+      const intervalId = setInterval(() => {
+        if (this.images.length < __WEBPACK_IMPORTED_MODULE_6_assets_sections_howItWas_images_js__["a" /* default */].length) {
+          this.images.push(__WEBPACK_IMPORTED_MODULE_6_assets_sections_howItWas_images_js__["a" /* default */][this.images.length]);
+        } else {
+          clearInterval(intervalId);
+        }
+      }, 1000);
+      setTimeout(() => {
+        this.setPosition();
+      }, 1200);
+    },
     handleResize: function() {
       if (this.fullscreen) {
         document.querySelector('body').setAttribute('style', 'overflow: hidden');
@@ -34421,18 +34478,18 @@ const step4 = {
 
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ([
-  'assets/sections/howItWas/gallery_1.jpg',
-  'assets/sections/howItWas/gallery_2.jpg',
-  'assets/sections/howItWas/gallery_3.jpg',
-  'assets/sections/howItWas/gallery_4.jpg',
-  'assets/sections/howItWas/gallery_5.jpg',
-  'assets/sections/howItWas/gallery_6.jpg',
-  'assets/sections/howItWas/gallery_7.jpg',
-  'assets/sections/howItWas/gallery_8.jpg',
-  'assets/sections/howItWas/gallery_9.jpg',
-  'assets/sections/howItWas/gallery_10.jpg',
-  'assets/sections/howItWas/gallery_11.jpg',
-  'assets/sections/howItWas/gallery_12.jpg'
+  'assets/img/gallery_1.jpg',
+  'assets/img/gallery_2.jpg',
+  'assets/img/gallery_3.jpg',
+  'assets/img/gallery_4.jpg',
+  'assets/img/gallery_5.jpg',
+  'assets/img/gallery_6.jpg',
+  'assets/img/gallery_7.jpg',
+  'assets/img/gallery_8.jpg',
+  'assets/img/gallery_9.jpg',
+  'assets/img/gallery_10.jpg',
+  'assets/img/gallery_11.jpg',
+  'assets/img/gallery_12.jpg'
 ]);
 
 
@@ -34443,7 +34500,7 @@ const step4 = {
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ([
   {
-    avatar: 'assets/sections/speakers/avatars/Michal_Cieslak.jpg',
+    avatar: 'assets/img/Michal_Cieslak.jpg',
     name: 'Michał Cieślak',
     company: 'Lionbridge',
     socialMedia: [
@@ -34451,37 +34508,37 @@ const step4 = {
     ]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Michal_Warkocz.jpg',
+    avatar: 'assets/img/Michal_Warkocz.jpg',
     name: 'Michał Warkocz',
     company: 'Atlassian',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/michal-warkocz/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Ilya_Zinoviev.jpg',
+    avatar: 'assets/img/Ilya_Zinoviev.jpg',
     name: 'Ilya Zinoviev',
     company: 'Atlassian',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/ilya-zinoviev-49581271/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Gosia_Gulagowska.jpg',
+    avatar: 'assets/img/Gosia_Gulagowska.jpg',
     name: 'Małgorzata Gułgowska-Kowalska',
     company: 'Atlassian',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/malgorzatagulgowska/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Jakub_Kurcek.jpg',
+    avatar: 'assets/img/Jakub_Kurcek.jpg',
     name: 'Jakub Kurcek',
     company: 'Atlassian',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/jakub-kurcek-3b61a462/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Feico_Mol.png',
+    avatar: 'assets/img/Feico_Mol.png',
     name: 'Feico Mol',
     company: 'Atlassian',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/feicomol/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Serhat_Can.jpg',
+    avatar: 'assets/img/Serhat_Can.jpg',
     name: 'Serhat Can',
     company: 'OpsGenie',
     socialMedia: [
@@ -34490,7 +34547,7 @@ const step4 = {
     ]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Robert_Swiderski.jpg',
+    avatar: 'assets/img/Robert_Swiderski.jpg',
     name: 'Robert Świderski',
     company: 'LOT',
     socialMedia: [
@@ -34498,43 +34555,43 @@ const step4 = {
     ]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Tarun_Sapra.jpg',
+    avatar: 'assets/img/Tarun_Sapra.jpg',
     name: 'Tarun Sapra',
     company: '',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/tsapra/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Hubert_Rzyha.jpg',
+    avatar: 'assets/img/Hubert_Rzyha.jpg',
     name: 'Hubert Rzyha',
     company: '',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/hubertrzyha/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Bogdan_Gorka.jpg',
+    avatar: 'assets/img/Bogdan_Gorka.jpg',
     name: 'Bogdan Górka',
     company: '',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/bgorka/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/ArturKarpisz.jpg',
+    avatar: 'assets/img/ArturKarpisz.jpg',
     name: 'Artur Karpisz',
     company: 'Alior Bank',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/artur-karpisz-829ba594' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Tanya_Gordon.jpg',
+    avatar: 'assets/img/Tanya_Gordon.jpg',
     name: 'Tanya Gordon',
     company: 'HP',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/gordontanya1/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/tom_harris.jpg',
+    avatar: 'assets/img/tom_harris.jpg',
     name: 'Tom Harris',
     company: 'London AUG Leader',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/imtomharris' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Chumski.jpg',
+    avatar: 'assets/img/Chumski.jpg',
     name: 'Paweł Chumski',
     company: 'Fujitsu',
     socialMedia: [
@@ -34542,55 +34599,55 @@ const step4 = {
     ]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/lukasz_Krupa.jpg',
+    avatar: 'assets/img/lukasz_Krupa.jpg',
     name: 'Łukasz Krupa',
     company: 'Deviniti',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/łukasz-krupa-1383b0a4/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Marcin_Skwara.jpg',
+    avatar: 'assets/img/Marcin_Skwara.jpg',
     name: 'Marcin Skwara',
     company: 'Link4',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/marcin-skwara/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Tom_Kucharski.jpg',
+    avatar: 'assets/img/Tom_Kucharski.jpg',
     name: 'Tom Kucharski',
     company: 'Software Plant',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/kucharski/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Zihni_Saglam.png',
+    avatar: 'assets/img/Zihni_Saglam.png',
     name: 'Zihni Saglam',
     company: 'Riada',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/zihni-saglam/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Karen_Schiekel.jpg',
+    avatar: 'assets/img/Karen_Schiekel.jpg',
     name: 'Karen Schiekel',
     company: 'Communardo',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/karen-schiekel/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Tobias_Theobald.jpg',
+    avatar: 'assets/img/Tobias_Theobald.jpg',
     name: 'Tobias Theobald',
     company: 'resolution GmbH',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/tobias-theobald/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Janis_Plume.png',
+    avatar: 'assets/img/Janis_Plume.png',
     name: 'Jānis Plūme',
     company: 'EazyBI',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/janis-plume-0943a617/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Julia_Skoursky.PNG',
+    avatar: 'assets/img/Julia_Skoursky.PNG',
     name: 'Julia Skoursky',
     company: 'ALM Works',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/juliakoz/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Eugene_Sokhransky.jpg',
+    avatar: 'assets/img/Eugene_Sokhransky.jpg',
     name: 'Eugene Sokhransky',
     company: 'ALM Works',
     socialMedia: [
@@ -34598,19 +34655,19 @@ const step4 = {
     ]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Genevieve_Blanch.JPG',
+    avatar: 'assets/img/Genevieve_Blanch.JPG',
     name: 'Genevieve Blanch',
     company: 'RefinedWiki',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/genevieveblanch/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Pawel_Mazur.jpg',
+    avatar: 'assets/img/Pawel_Mazur.jpg',
     name: 'Pawel Mazur',
     company: 'Spartez',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/jacekwizmurszymczak/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Jacek_Wizmur.jpg',
+    avatar: 'assets/img/Jacek_Wizmur.jpg',
     name: 'Jacek Wizmur',
     company: 'Spartez',
     socialMedia: [
@@ -34618,13 +34675,13 @@ const step4 = {
     ]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Jorge_Merino.jpg',
+    avatar: 'assets/img/Jorge_Merino.jpg',
     name: 'Jorge Merino',
     company: 'Comalatech',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/merinojmp/Jorge' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Vadim_Rutkevich.jpg',
+    avatar: 'assets/img/Vadim_Rutkevich.jpg',
     name: 'Vadim Rutkevich',
     company: 'StiltSoft',
     socialMedia: [
@@ -34632,7 +34689,7 @@ const step4 = {
     ]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Natalie_Paramonova.jpg',
+    avatar: 'assets/img/Natalie_Paramonova.jpg',
     name: 'Natalie Paramonova',
     company: 'StiltSoft',
     socialMedia: [
@@ -34640,7 +34697,7 @@ const step4 = {
     ]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Sebastian_Krzewinski.jpg',
+    avatar: 'assets/img/Sebastian_Krzewinski.jpg',
     name: 'Sebastian Krzewiński',
     company: 'Żabka Polska sp. z o.o.',
     socialMedia: [
@@ -34648,19 +34705,19 @@ const step4 = {
     ]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Joe_McFarlane.jpg',
+    avatar: 'assets/img/Joe_McFarlane.jpg',
     name: 'Joe McFarlane',
     company: 'LucidChart',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/josephmcfarlane/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Kasia_Pawlak.png',
+    avatar: 'assets/img/Kasia_Pawlak.png',
     name: 'Katarzyna Pawlak',
     company: 'Deviniti',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/katarzynazofiapawlak/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/natalia.korybska.png',
+    avatar: 'assets/img/natalia.korybska.png',
     name: 'Natalia Korybska',
     company: 'Deviniti',
     socialMedia: [
@@ -34668,25 +34725,25 @@ const step4 = {
     ]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Jarek_Solecki.png',
+    avatar: 'assets/img/Jarek_Solecki.png',
     name: 'Jarosław Solecki',
     company: 'Deviniti',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/jareksolecki/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Michal_Sztuka.jpg',
+    avatar: 'assets/img/Michal_Sztuka.jpg',
     name: 'Michał Sztuka',
     company: 'Deviniti',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/michal-sztuka/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Radoslaw_Cichocki.png',
+    avatar: 'assets/img/Radoslaw_Cichocki.png',
     name: 'Radosław Cichocki',
     company: 'Deviniti',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/rcichocki/' }]
   },
   {
-    avatar: 'assets/sections/speakers/avatars/Boguslaw_Osuch.png',
+    avatar: 'assets/img/Boguslaw_Osuch.png',
     name: 'Bogusław Osuch',
     company: 'Deviniti',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/bosuch/' }]
@@ -34700,26 +34757,26 @@ const step4 = {
 
 "use strict";
 const gold = [
-  { image: 'assets/sections/partners/logos/riada.png', name: 'riada' },
-  { image: 'assets/sections/partners/logos/SP.png', name: 'softwareplant' },
-  { image: 'assets/sections/partners/logos/communardo.png', name: 'communardo' },
-  { image: 'assets/sections/partners/logos/resolution.png', name: 'resolution' },
-  { image: 'assets/sections/partners/logos/eazyBi.png', name: 'eazyBi' }
+  { image: 'assets/img/riada.png', name: 'riada' },
+  { image: 'assets/img/SP.png', name: 'softwareplant' },
+  { image: 'assets/img/communardo.png', name: 'communardo' },
+  { image: 'assets/img/resolution.png', name: 'resolution' },
+  { image: 'assets/img/eazyBi.png', name: 'eazyBi' }
 ];
 /* harmony export (immutable) */ __webpack_exports__["a"] = gold;
 
 
 const silver = [
-  { image: 'assets/sections/partners/logos/aalmworks.png', name: 'aalmworks' },
-  { image: 'assets/sections/partners/logos/refinedwiki.png', name: 'refinedwiki' },
-  { image: 'assets/sections/partners/logos/spartez.png', name: 'spartez' },
-  { image: 'assets/sections/partners/logos/tempo.png', name: 'tempo' },
-  { image: 'assets/sections/partners/logos/comalatech.png', name: 'comalatech' },
-  { image: 'assets/sections/partners/logos/stillsoft.png', name: 'stillsoft' },
-  { image: 'assets/sections/partners/logos/deiser.png', name: 'deiser' },
-  { image: 'assets/sections/partners/logos/k15t.png', name: 'k15t' },
-  { image: 'assets/sections/partners/logos/metainf.png', name: 'metainf' },
-  { image: 'assets/sections/partners/logos/lucidchart.png', name: 'lucidchart' }
+  { image: 'assets/img/aalmworks.png', name: 'aalmworks' },
+  { image: 'assets/img/refinedwiki.png', name: 'refinedwiki' },
+  { image: 'assets/img/spartez.png', name: 'spartez' },
+  { image: 'assets/img/tempo.png', name: 'tempo' },
+  { image: 'assets/img/comalatech.png', name: 'comalatech' },
+  { image: 'assets/img/stillsoft.png', name: 'stillsoft' },
+  { image: 'assets/img/deiser.png', name: 'deiser' },
+  { image: 'assets/img/k15t.png', name: 'k15t' },
+  { image: 'assets/img/metainf.png', name: 'metainf' },
+  { image: 'assets/img/lucidchart.png', name: 'lucidchart' }
 ];
 /* harmony export (immutable) */ __webpack_exports__["b"] = silver;
 
@@ -34731,7 +34788,7 @@ const silver = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1553129923056
+      // 1553133257296
       var cssReload = require("!../../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -34744,7 +34801,7 @@ const silver = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1553129923043
+      // 1553133257277
       var cssReload = require("!../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -34757,7 +34814,7 @@ const silver = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1553129924577
+      // 1553133258757
       var cssReload = require("!../node_modules/css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
