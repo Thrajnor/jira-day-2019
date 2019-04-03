@@ -10882,7 +10882,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 
 new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   data: {
-    jiraDayDate: new Date(2019, 4, 35),
+    jiraDayDate: new Date(2019, 4, 29, 9),
     hasJS: true,
     months: 0,
     days: 0,
@@ -10901,7 +10901,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
         this.seconds = ts.seconds;
       },
       this.jiraDayDate,
-      ~__WEBPACK_IMPORTED_MODULE_1_countdown___default.a.YEARS & ~__WEBPACK_IMPORTED_MODULE_1_countdown___default.a.MILLISECONDS
+      ~__WEBPACK_IMPORTED_MODULE_1_countdown___default.a.YEARS & ~__WEBPACK_IMPORTED_MODULE_1_countdown___default.a.MILLISECONDS & ~__WEBPACK_IMPORTED_MODULE_1_countdown___default.a.WEEKS
     );
   },
   methods: {
@@ -10936,7 +10936,8 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   data: {
     hasJS: true,
     gold: __WEBPACK_IMPORTED_MODULE_9_assets_sections_partners_partners_js__["a" /* gold */],
-    silver: __WEBPACK_IMPORTED_MODULE_9_assets_sections_partners_partners_js__["b" /* silver */]
+    silver: __WEBPACK_IMPORTED_MODULE_9_assets_sections_partners_partners_js__["c" /* silver */],
+    media: __WEBPACK_IMPORTED_MODULE_9_assets_sections_partners_partners_js__["b" /* media */]
   }
 }).$mount('#partners');
 
@@ -34325,12 +34326,12 @@ const day1 = [
   [
     {
       time: '10:45 - 11:15',
-      title: 'How Atlassian JIRA software supports HP on its LPPD journey',
+      title: 'How Atlassian Jira software supports HP on its LPPD journey',
       speaker: 'Tanya Gordon',
       company: 'HP',
       extra: {
         content:
-          'Atlassian was chosen as the tactical toolset to introduce and apply the LEAN methodology at HP. LEAN is not just a buzzword or a quick fix, but rather a strategy: a new way of thinking and running a company, which is beneficial to the line worker as to the CEO. The ultimate goal was to create the most value to the customer, while minimizing resources, time, energy and reducing waste. To achieve this, HP has traveled a unique and successful journey. I believe that sharing our journey would inspire others to choose Atlassian as their prime infrastructure to the whole product development process.'
+          'Atlassian was chosen as the technical partner to introduce and apply the LEAN methodology at HP. LEAN is not just a buzzword or a quick fix, but rather a strategy: a new way of thinking and running a company, which is beneficial for both line workers and the CEO. The ultimate goal was to create the most value for the customers while minimizing resources, time, energy and reducing waste. To achieve this, HP has traveled a unique and successful journey. I believe that sharing our journey would inspire others to choose Atlassian software as their prime infrastructure to the whole product development process.'
       }
     }
   ],
@@ -34343,19 +34344,19 @@ const day1 = [
       company: 'Lionbridge',
       extra: {
         content:
-          'We translate content into 90+ languages for a technology giant. We manage production work in the follow-the-sun model from Beijing to Seattle. We select linguists and distribute work automatically to our 1100+ community members around the globe. Come and see how we’ve achieved that using Jira!'
+          'We translate content into 90+ languages for a technology giant, manage production work in the follow-the-sun model from Beijing to Seattle, select linguists and distribute work automatically to our 1100+ community members around the globe.'
       }
     },
     {
       dual: [
         {
           time: '11:45 - 12:00',
-          title: 'Tackle the Chaos with Categories for Bitbucket',
+          title: 'Tackle the chaos with categories for Bitbucket',
           speaker: 'Karen Schiekel',
           company: 'Communardo',
           extra: {
             content:
-              'How many repositories do you have in Bitbucket? I bet more than you think! Categories for Bitbucket str uctures repos itories and pr ojects by categorizing them, giving you a quick overview to find projects and repositories f aster than ever before.'
+              'How many structures, repositories and projects do you have in Bitbucket? I bet more than you think! Categories for Bitbucket str uctures repos itories and pr ojects by categorizing them, giving a quick overview and enabling to find projects faster than ever before.'
           }
         },
         {
@@ -34364,19 +34365,19 @@ const day1 = [
           speaker: 'Tobias Theobald',
           company: 'Resolution GmbH',
           extra: {
-            content: 'The business benefit of Single Sign On'
+            content: 'The business benefit of Single Sign-On'
           }
         }
       ]
     },
     {
       time: '11:45 - 12:15',
-      title: 'How we implement and use JIRA Service Desk in Żabka',
+      title: 'How we implement and use Jira Service Desk in Żabka',
       speaker: 'Sebastian Krzewiński',
       company: 'Żabka Polska',
       extra: {
         content:
-          "Are you curious how connect many service desk teams in one customer portal? I will talk about the implementatio n of JIRA Service Desk in Żabka. I'll describe how teams work and explain why we decided on this solution. I will present the technicals details, difficulties and dangers what we faced during implementatio n. Also I want show how it all looks from the customer's perspective (communicatio n and raising issues)."
+          "Are you curious how to connect many service desk teams in one customer portal? I will talk about the implementation of Jira Service Desk in Żabka. I'll describe how teams work and why we decided on this solution. I’ll present technical details, difficulties and dangers we faced during implementation, as well as describe how our teams work and how communication and raising issues look like from the customer’s perspective."
       }
     }
   ],
@@ -34397,7 +34398,7 @@ const day1 = [
           time: '12:15 - 12:30',
           title: 'Project reporting for Jira',
           speaker: 'Jānis Plūme',
-          company: 'EazyBI',
+          company: 'eazyBI',
           extra: {
             content:
               'This talk will illustrate how to create project reports from Jira using eazyBI, gaining insights into project status, progress, and forecasts.'
@@ -34410,7 +34411,7 @@ const day1 = [
           company: 'ALM Works',
           extra: {
             content:
-              'One of the benefits of managing projects in Jira is that you can have access to live project data. Jira offers a number of useful reports that work especially well at the team level. Unfortunately, when it comes to understandin g where you are across multiple teams and projects, those out-of-the-box reports often don’t provide the higher level of information you need. Learn how Structure for Jira can'
+              'One of the benefits of managing projects in Jira is that you can have access to live project data. Jira offers a number of useful reports that work especially well at the team level. Unfortunately, when it comes to understanding where you are across multiple teams and projects, those out‑of‑the‑box reports often don’t provide the higher level of information you need. Learn how Structure for Jira can help here.'
           }
         }
       ]
@@ -34423,7 +34424,7 @@ const day1 = [
       company: 'LOT',
       extra: {
         content:
-          'How to use JIRA in different environments - JIRA Service Desk as a „flights reports” and „crew requests” software in LOT Polish Airlines.'
+          'How to use Jira in different environments - Jira Service Desk as a „flights reports” and „crew requests” software in LOT Polish Airlines.'
       }
     }
   ],
@@ -34435,14 +34436,14 @@ const day1 = [
       company: 'London AUG Leader',
       extra: {
         content:
-          'Tom from the London Atlassian User Group will discuss how to give 5 support agents the power of 50. With three different options and step by step advice on how to automate many of the tasks that make a support agent’s life a chore.'
+          'Tom from the London Atlassian User Group will discuss how to give 5 support agents the power of 50. He’ll share three different options and will guide us step by step on how to automate many tasks that make an agent’s life a chore.'
       }
     },
     {
       dual: [
         {
           time: '12:45 - 13:00',
-          title: 'Getting the most out of your Enterprise Service Management solution.',
+          title: 'Getting the most out of your Enterprise Service Management solution',
           speaker: 'Zihni Saglam',
           company: 'Riada',
           extra: {
@@ -34453,22 +34454,23 @@ const day1 = [
         {
           time: '12:00 - 13:15',
           title: 'Live Tracking and Reporting in Jira',
-          speaker: 'Software Plant',
+          speaker: 'Tom Kucharski',
+          company: 'SoftwarePlant',
           extra: {
             content:
-              'Small teams love working in an agile manner. Scrum, Kanban, and XP are some of the methods they use to boost productivity. However, for a large organization to be productive as a whole, project portfolio management is needed: coordination between various undertakings, risk management on program or portfolio levels, and cross-project resource management . How can an organization combine agility on a team level with responsibility on program and portfolio levels? Is it possible for a CEO to have reliable information about the progress of their most critical business objectives? Methodologi es like Scaled Agile Framework (SAFe) address these kinds of questions and inspire product development , and BigPicture is one of the few tools that allows for the combination of both agile and waterfall methods.'
+              'Small teams love working in an agile manner. Scrum, Kanban, and XP are some of the methods they use to boost productivity. However, for a large organization to be productive as a whole, project portfolio management is needed: coordination between various undertakings, risk management on program or portfolio levels, and cross-project resource management. How can an organization combine agility on a team level with responsibility on program and portfolio levels? Is it possible for a CEO to have reliable information about the progress of their most critical business objectives? Methodologies like Scaled Agile Framework (SAFe) address these kinds of questions and inspire product development. BigPicture is one of the few tools that allows for the combination of both agile and waterfall methods.'
           }
         }
       ]
     },
     {
       time: '12:45 - 13:15',
-      title: 'Od pomysłu i projektu do utrzymania w JIRA Service Desk (PL)',
+      title: 'Od pomysłu i projektu do utrzymania w Jira Service Desk (PL)',
       speaker: 'Artur Karpisz',
       company: 'Alior Bank',
       extra: {
         content:
-          '- Wyzwania w realizacji procesu projektowego w JIRA i JIRA Service Desk.\n- Programiści, administratorzy – prawa autorskie w JIRA Service Desk.\n- Wnioski JIRA Service Desk w procesie projektowym – optymalizacja formatek, akceptacje zespołowe i równoległe, integracja z innymi systemami.\n- Monitorowanie i zbieranie informacji na karcie projektu'
+          '- Wyzwania w realizacji procesu projektowego w Jira i Jira Service Desk.\n- Programiści, administratorzy – prawa autorskie w Jira Service Desk.\n- Wnioski Jira Service Desk w procesie projektowym – optymalizacja formatek, akceptacje zespołowe i równoległe, integracja z innymi systemami.\n- Monitorowanie i zbieranie informacji na karcie projektu'
       }
     }
   ],
@@ -34481,7 +34483,7 @@ const day1 = [
       company: 'OpsGenie',
       extra: {
         content:
-          'Good uptime and performance is a must for modern software. We know that cost of these failure are tremendous but we (must) fail all the time. It is our job as developers of these systems to ensure that we can bring the system back into a healthy state in the least possible time. And Opsgenie can help you with that! Opsgenie is a modern incident management platform for operating always on services, empowering dev & ops teams to plan for service disruptions and stay in control during incidents. This talk is about the newest addition of Atlassian family and how it helps unleash the potential of on-call teams. We are going to start with some basics and cover the importance of good on-call and incident response practices. We will cover Opsgenie’s core features and see how Opsgenie integrates with other Atlassian tools like Jira, JSD, and Statuspage.'
+          'Good uptime and performance is a must for modern software. We know that failures can cost tremendously, but we (must) fail all the time. It is our job as developers of these systems to ensure that we can bring the system back into a healthy state in the least possible time. And Opsgenie can help you with that! Opsgenie is a modern incident management platform for operating always on services, empowering dev & ops teams to plan for service disruptions and stay in control during incidents. This talk is about the newest addition of Atlassian family and how it helps unleash the potential of on-call teams. We are going to start with some basics and cover the importance of good on-call and incident response practices. We will cover Opsgenie’s core features and see how Opsgenie integrates with other Atlassian tools like Jira, Jira Service Desk, and Statuspage.'
       }
     },
     {
@@ -34493,7 +34495,7 @@ const day1 = [
           company: 'Deviniti',
           extra: {
             content:
-              'Base on our experience as an Atlassian Platinum and Enterprise Solutions Partner, we would like to break stereotype that using Jira is difficult and painful and show that communication and cooperation between them is POSSIBLE. Moreover, using Atlassian products it can be effective and bring benefits for employees, companies and finally - for customers.'
+              'Basing on our experience as an Atlassian Platinum and Enterprise Solutions Partner, we would like to break stereotype that using Jira is difficult and painful, and show that communication and cooperation between users and Jira is POSSIBLE. Moreover, using Atlassian products it can be effective and bring benefits for employees, companies and finally - for customers.'
           }
         },
         {
@@ -34504,19 +34506,19 @@ const day1 = [
           company: 'Spartez',
           extra: {
             content:
-              "During presentation we'll show you how the usage of Chat for Jira Service Desk, highly integrated in JSD can speed up request resolution and make live of an JSD agent much easier."
+              'During the presentation, we’ll show you how the usage of Chat for Jira Service Desk, highly integrated into the solution, can speed up request resolution and make Service Desk agents’ lives much easier.'
           }
         }
       ]
     },
     {
       time: '14:30 - 15:00',
-      title: 'Meeting customers needs – workflow possibilities in Jira.',
+      title: 'Meeting customers needs – workflow possibilities in Jira',
       speaker: 'Paweł Chumski',
       company: 'Fujitsu',
       extra: {
         content:
-          'Short presentation about filling costommer’s needs with workflow possibilities. Conditions, validators, postfunctins.'
+          'A short presentation about fulfiling customers’ needs using workflow conditions, validators, and post functions.'
       }
     }
   ],
@@ -34528,7 +34530,7 @@ const day1 = [
       company: 'Atlassian',
       extra: {
         content:
-          'A complete walkthrough on the history behind Data Center. We will tell you the story how it begun, for who we built it, how it evolved and what direction we are moving with it.'
+          'A complete walkthrough on the history behind Data Center. We will tell you how it all began, for whom we built it, how it evolved and which direction we are moving with it.'
       }
     },
     {
@@ -34537,10 +34539,10 @@ const day1 = [
           time: '15:00 - 15:15',
           title: 'Is it time to go Refined?',
           speaker: 'Genevieve Blanch',
-          company: 'Refined Wiki',
+          company: 'Refined',
           extra: {
             content:
-              'Implementing clean infrastructure within a team or organization can drastically improve processes. Join Refined to get an understandin g of how Refined apps provide the infrastructure to drive clear communicati on across your organization.'
+              'Implementing clean infrastructure within a team or organization can drastically improve processes. Join Refined to get an understanding of how Refined apps provide the infrastructure to drive clear communication across your organization.'
           }
         },
         {
@@ -34550,7 +34552,7 @@ const day1 = [
           company: 'Comalatech',
           extra: {
             content:
-              'Discover how Comalatech’s unique team builds some of the Marketplace’s top selling apps'
+              'Discover how Comalatech’s unique team builds some of the Marketplace’s top selling apps.'
           }
         }
       ]
@@ -34562,7 +34564,7 @@ const day1 = [
       company: 'Ingenico Group',
       extra: {
         content:
-          "A lot of new features have been added to the Jira cloud recently, whether it's new the UI, Next- gen projects, Incident management.This talk aims to delve deeper into these features, especially covering all the pros and cons from an end- user perspective and how the agile teams can get up to speed with these new features.We will look into all the new next - gen project features like roadmaps, feature toggle, incident management project templates and their integration with Ops genie.How we can now with Jira cloud streamline our incident management process in oneplace and involve all the relevant stakeholders in a single Jira issue view instead of sending emails to individual teams."
+          "A lot of new features have been added to the Jira cloud recently, whether it's new the UI, next‑gen projects, incident management. This talk aims to delve deeper into these features, especially covering all the pros and cons from an end‑user perspective and how the agile teams can get up to speed with these new features. We will look into all the new next‑gen project features like roadmaps, feature toggle, incident management project templates and their integration with Ops genie. We’ll learn how we can streamline incident management process in one place with Jira Cloud and involve all the relevant stakeholders in a single Jira issue view instead of sending emails to individual teams."
       }
     }
   ],
@@ -34570,12 +34572,12 @@ const day1 = [
   [
     {
       time: '16:00 - 16:30',
-      title: 'Foundations of point-to-point application integrations.',
+      title: 'Foundations of point-to-point application integrations',
       speaker: 'Łukasz Krupa',
       company: 'Deviniti',
       extra: {
         content:
-          "JIRA as a process oriented tool often need to communicate with many other applications to facilitate and automate your processes. The answer is EASY, you need an INTERATION ...but 'easy integration' is an oxymoron. So how to approach to an integration in most efficient way? What is working, what is not and when? Get know ABC of application integrations to understand architectural decision."
+          'As a process-oriented tool, Jira often needs to communicate with many other applications in order to facilitate and automate your processes. The answer is easy, we need integrations… but an “easy integration” is an oxymoron. So how to approach integrations most efficiently? What is working, what is not and when? Get to know the ABC of application integrations to understand architectural decisions.'
       }
     },
     {
@@ -34587,7 +34589,7 @@ const day1 = [
           company: 'LucidChart',
           extra: {
             content:
-              "As teams grow and scale, so must their communicati on methods. What works for a 5-person company likely won't work for a 500-person company. Successfully scaling communicati on methods and systems is imperative for maintaining company processes, procedures, leadership, and culture. Joe will discuss how Lucid has been able to maintain open and thriving channels of communicati on as they have scaled from 90 employees to 450 in just 3 years."
+              "As teams grow and scale, so must their communication methods. What works for a 5-person company likely won't work for a 500-person company. Successfully scaling communication methods and systems is imperative for maintaining company processes, procedures, leadership, and culture. Joe will discuss how Lucid has been able to maintain open and thriving channels of communication as they have scaled from 90 employees to 450 in just 3 years."
           }
         },
         {
@@ -34596,7 +34598,7 @@ const day1 = [
           speaker: 'K15t',
           extra: {
             content:
-              "You're convinced that Confluence is a great tool to create content together: it’s easy to add, discuss, and collaborate on content. But why do some teams struggle to get their people working in Confluence? Why do your co-workers still email files back and forth? In this talk, we’ll share how to build a culture of effective collaboration and how to make your Confluence pages shine. We'll cover communicati on guidelines, breaking up long pages, establishing content owners, and much more. By applying these tips, your team will be happier and work more effectively together."
+              "You're convinced that Confluence is a great tool to create content together: it’s easy to add, discuss, and collaborate on content. But why do some teams struggle to get their people working in Confluence? Why do your co-workers still email files back and forth? In this talk, we’ll share how to build a culture of effective collaboration and how to make your Confluence pages shine. We'll cover communication guidelines, breaking up long pages, establishing content owners, and much more. By applying these tips, your team will be happier and work more effectively together."
           }
         }
       ]
@@ -34604,11 +34606,11 @@ const day1 = [
     {
       time: '16:00 - 16:30',
       title:
-        'Migration of Jira projects between different instances in a large global organization.',
+        'Migration of Jira projects between different instances in a large global organization',
       speaker: 'Hubert Rzyha',
       extra: {
         content:
-          'The aim is to show proces of projects migration between various JIRA instances, keeping all possible comments, etc. Showing what problems you need to deal with both technical and business in a global organization. Best pracites and step by step guidance.'
+          'The goal of the presentation is to show the process of project migration between various Jira instances, keeping all possible comments, etc. I’ll show the problems you have to deal with in a global organization, both technical and business-wise, as well as best practices and step-by-step guides.'
       }
     }
   ],
@@ -34617,10 +34619,9 @@ const day1 = [
       time: '16:30 - 17:00',
       title: 'Common pitfalls of Jira greenfield implementations (and how to avoid them)',
       speaker: 'Bogdan Górka',
-      company: 'Deviniti',
       extra: {
         content:
-          "Clients who decide to introduce Atlassian technology in their organizations are rarely aware and prepared for what it takes to implement Jira and how it will impact their company culture in the long run. During this presentation, you will learn about a few most common pitfalls one can fall into during Jira implementatio ns and how to avoid them. The presenter has spent the last few years in the Jira greenfield implementation 'trenches' and will share with you his insights of working with business and technical teams meeting Jira for the first time."
+          "Clients who decide to introduce Atlassian technology in their organizations are rarely aware and prepared for what it takes to implement Jira and how it will impact their company culture in the long run. During this presentation, you will learn about a few most common pitfalls one can fall into during Jira implementations and how to avoid them. The presenter has spent the last few years in the Jira greenfield implementation 'trenches' and will share with you his insights of working with business and technical teams meeting Jira for the first time."
       }
     },
     {
@@ -34648,7 +34649,7 @@ const day1 = [
       company: 'Link4',
       extra: {
         content:
-          'I will talk about what synchronization is and how the Issue SYNC addon can be used for it. You will learn about use cases as well as good and bad practices in its configuration.'
+          'I will talk about what synchronization is and how the Issue SYNC app addon can be used for it. You will learn the use cases as well as good and bad practices in its configuration.'
       }
     }
   ],
@@ -34656,7 +34657,7 @@ const day1 = [
     {
       time: '17:00 - 17:30',
       title: 'Jira bugfix - what are the rules of the game?',
-      speaker: 'Michał Warkoczw',
+      speaker: 'Michał Warkocz',
       company: 'Atlassian',
       extra: {
         content:
@@ -34669,17 +34670,17 @@ const day1 = [
           time: '17:00 - 17:15',
           title: 'Document management in Jira and Confluence',
           speaker: 'Vadim Rutkevich',
-          company: 'Stiltsoft',
+          company: 'StiltSoft',
           extra: {
             content:
-              'The presentation will highlight the basic approaches and comprehensi ve practices for managing documents in Jira and Confluence with the Smart Attachments app. The efficient document management in Jira and Confluence simplifies the retention of documents, their searchability, and further collaboration with the team on your project documents and files.'
+              'The presentation will highlight the basic approaches and comprehensive practices for managing documents in Jira and Confluence with the Smart Attachments app. The efficient document management in Jira and Confluence simplifies the retention of documents, their searchability, and further collaboration with the team on your project documents and files.'
           }
         },
         {
           time: '17:15 - 17:30',
           title:
             "Mastering Jira Projects: Take'em to the next level with project-level custom fields, bulk operations and more",
-          speaker: 'Deiser',
+          speaker: 'DEISER',
           extra: {
             content:
               "Do you want the maximum visibility for your Jira projects? Join DEISER's training or pass by our booth and learn the basics on how to democratize Jira projects, leverage project-level Custom Fields, modify hundreds of projects at once, escalate to the enterprise, and many more features."
@@ -34687,7 +34688,16 @@ const day1 = [
         }
       ]
     },
-    {}
+    {
+      time: '17:00 - 17:30',
+      title: 'Become the Andy Warhol of your Customer Portal (PL)',
+      speaker: 'Katarzyna Pawlak, Michał Sztuka',
+      company: 'Deviniti',
+      extra: {
+        content:
+          'Do you know Campbell’s Soup Cans or the Marilyn Monroe portrait? Andy Warhol was the most famous pop artist, and you can gain similar popularity in your company. Unleash your creativity and build a beautiful Customer Portal using our new app: Theme Extension for Jira Service Desk.'
+      }
+    }
   ],
   [{ time: '17:30', title: 'After Party', last: true, whole: true }]
 ];
@@ -34699,14 +34709,15 @@ const day2 = [
     {
       time: '09:00 - 10:30',
       title: 'SAFe, Waterfall and hybrid project management in Jira',
-      speaker: 'Software Plant',
+      speaker: 'Tom Kucharski',
+      company: 'SoftwarePlant',
       extra: {
         content:
-          "Agile approaches assume that you cannot fix the budget, the scope of work and the schedule at the same time. So, in essence, you have a team, a more or less fixed budget, and you attempt to work as productively as possible; this means either the schedule or the scope of delivery is unknown. So, we say to the CEO: 'I want you to invest X, but I am not able to tell you what exactly I will deliver and when.' If your teams work in an agile manner and the CEO gets a different message, you should be cautious. Tom Kucharski, SoftwarePlan t's CEO, will tell you what questions to ask and what answers you should expect."
+          "Agile approaches assume that you cannot fix the budget, the scope of work and the schedule at the same time. So, in essence, you have a team, a more or less fixed budget, and you attempt to work as productively as possible; this means either the schedule or the scope of delivery is unknown. So we say to the CEO: 'I want you to invest X, but I am not able to tell you what exactly I will deliver and when.' If your teams work in an agile manner and the CEO gets a different message, you should be cautious. Tom Kucharski, SoftwarePlant's CEO, will tell you what questions to ask and what answers you should expect."
       }
     },
     {
-      title: 'A demo of the Insight and Insight Discovery.',
+      title: 'A demo of the Insight and Insight Discovery',
       speaker: 'Zihni Saglam',
       company: 'Riada',
       extra: {
@@ -34723,7 +34734,7 @@ const day2 = [
             company: 'StiltSoft',
             extra: {
               content:
-                'You will learn how to create a flexible and dynamic Jira project dashboard with the help of the native Confluence tools and discover such capabilities of the Table Filter and Charts app as: - building Gantt chart - comparison of graphs of open and resolved tickets by types - sprint storypoints calculation - visualizing team worklogs and more'
+                'You will learn how to create a flexible and dynamic Jira project dashboard with the help of the native Confluence tools and discover such capabilities of the Table Filter and Charts app as:\n• building Gantt chart\n• comparison of graphs of open and resolved tickets by types\n• sprint storypoints calculation\n• visualizing team worklogs and more'
             }
           },
           {
@@ -34732,7 +34743,7 @@ const day2 = [
             company: 'Deviniti',
             extra: {
               content:
-                'In this workshop you will learn how to start implementing JSD, depending on your status quo. Some organizations are young and do not have any experience with ITSM, helpdesk or customer service systems, whereas others have outgrown their current tools and would like to migrate to Jira. The starting point may vary, but the path is similar in both cases. You will walk with me through the process, learn what questions you should ask yourself and in what sequence, and see how to configure JSD in practice based on the answers you receive from your teams. This workshop will give IT personnel guidelines on how to walk the path. To those of you who are from HR, legal, customer service, collections, and other departments, it will give you a glimpse into how you can provide your services to internal or external customers through a centralized service desk, and it will prepare you to think about the answers to the questions that your IT will ask in the future.'
+                'In this workshop you will learn how to start implementing Jira Service Desk depending on your status quo. Some organizations are young and do not have any experience with ITSM, helpdesk or customer service systems, whereas others have outgrown their current tools and would like to migrate to Jira. The starting point may vary, but the path is similar in both cases. You will walk with me through the process, learn what questions you should ask yourself and in what sequence, and see how to configure Jira Service Desk in practice based on the answers you receive from your teams. This workshop will give IT personnel guidelines on how to walk the path. To those of you who are from HR, legal, customer service, collections, and other departments, it will give you a glimpse into how you can provide your services to internal or external customers through a centralized service desk, and it will prepare you to think about the answers to the questions that your IT will ask in the future.'
             }
           }
         ],
@@ -34744,16 +34755,16 @@ const day2 = [
             company: 'Lucidchart',
             extra: {
               content:
-                'Teams need to communicate within Confluence and Jira but struggle with accurately conveying their messages within long narratives and text. Come learn how to easily enhance and improve your Confluence and JIRA communicati ons through the use of Lucidchart. We will be sharing best practices and use cases that show just how powerful visualizing systems and processes can be for your organizations.'
+                'Teams need to communicate within Confluence and Jira but struggle with accurately conveying their messages within long narratives and text. Come learn how to easily enhance and improve your Confluence and Jira communications through the use of Lucidchart. We will be sharing best practices and use cases that show just how powerful visualizing systems and processes can be for your organizations.'
             }
           },
           {
             title:
               'How much do you know about your Jira projects? Build a project central with Profields and unleash business decisions',
-            speaker: 'Deiser',
+            speaker: 'DEISER',
             extra: {
               content:
-                'Come and learn how Profields places data at the core of Jira projects so you can centralize information, report at project level, and have a unified overview of all your initiatives without leaving the place where work happens.'
+                'Come and learn how Profields places data at the core of Jira projects so you can centralize information, report at the project level, and have a unified overview of all your initiatives without leaving the place where the work happens.'
             }
           }
         ]
@@ -34765,10 +34776,10 @@ const day2 = [
     {
       time: '11:00 - 12:30',
       title: 'Reporting on Jira for different teams and basic functionality of eazyBI',
-      speaker: 'EazyBI',
+      speaker: 'eazyBI',
       extra: {
         content:
-          'The extensive use of Jira as a collaboration tool gathers a lot of useful data from almost every activity of our daily work. Different teams require different reports from Jira data and the reporting requirements grow soon and fast. eazyBI provides the flexibility in creating customized reports for different teams and helps to explore your data for better decision making. This session will provide insight into the basic functionality of eazyBI and will cover some typical'
+          'The extensive use of Jira as a collaboration tool gathers a lot of useful data from almost every activity of our daily work. Different teams require different reports from Jira data, and the reporting requirements grow soon and fast. eazyBI provides the flexibility in creating customized reports for different teams and helps to explore your data for better decision making. This session will provide insight into the basic functionality of eazyBI and will cover some typical use cases.'
       }
     },
     {
@@ -34786,12 +34797,12 @@ const day2 = [
           {
             time: '11:00 - 11:45',
             title:
-              'How does TestFLO support its own development. Testing process and test automation examples.',
+              'How does TestFLO support its own development. Testing process and test automation examples',
             speaker: 'Bogusław Osuch',
             company: 'Deviniti',
             extra: {
               content:
-                'In this presentation i will show how one of product teams uses their own products to increase productivity and automate testing, development and support processes of their own apps. I will present our development, testing and release process of TestFLO and show how we and our customers use TestFLO features in a standard and non-standard way. Testing is just a beginning, see how you can use TestFLO to get much more than you expected.'
+                'In this presentation, I will show how one of product teams uses their own products to increase productivity and automate testing, development and support processes of their own apps. I will present our development, testing and release process of TestFLO and show how we and our customers use TestFLO features in a standard and non-standard way. Testing is just the beginning, see how you can use TestFLO to get much more than you expected.'
             }
           },
           {
@@ -34801,7 +34812,7 @@ const day2 = [
             company: 'Spartez',
             extra: {
               content:
-                "We'll use Asset Tracker for Jira to manage our company assets directly from Jira. Together with an audience, we will practice how to get the most of crucial features. We will review common clients use cases."
+                "We'll use Asset Tracker for Jira to manage our company assets directly from Jira. Together with the audience, we’ll practice getting the most of the key app’s features and review common clients’ use cases."
             }
           }
         ],
@@ -34821,7 +34832,7 @@ const day2 = [
             company: 'ALM Works',
             extra: {
               content:
-                'Structure is a great tool for visualizing a large scope of work. Now with its powerful Formulas feature you can also calculate and show any custom metrics in real time and continuously track status, even across multiple projects. Learn how you can use Structure formula language to build insightful reports in Jira in just a few minutes. And don’t worry - this requires no scripting. If you’ve ever used formulas in Excel (even simple ones), you should have no problem doing the same is Structure.'
+                'Structure is a great tool for visualizing a large scope of work. Now, with its powerful Formulas feature, you can also calculate and show any custom metrics in real time and continuously track status, even across multiple projects. Learn how you can use Structure formula language to build insightful reports in Jira in just a few minutes. And don’t worry - this requires no scripting. If you’ve ever used formulas in Excel (even simple ones), you should have no problem doing the same in Structure.'
             }
           }
         ]
@@ -34849,16 +34860,16 @@ const day2 = [
           company: 'Comalatech',
           extra: {
             content:
-              'Common Roadblocks and Solutions to Document Control leveraging Confluence and Comala Workflows'
+              'Common Roadblocks and Solutions to Document Control leveraging Confluence and Comala Workflows.'
           }
         },
         {
           time: '15:00 - 15:45',
-          title: 'So Long, Silos! How to Better Manage Your Documents in Confluence.',
+          title: 'So Long, Silos! How to Better Manage Your Documents in Confluence',
           speaker: 'K15t',
           extra: {
             content:
-              "It's time to ditch clunky document management systems, break down content silos, and extend Confluence to teams who still rely on traditional document formats. Confluence is great for creating and managing content, but there are still a few drawbacks when it comes to traditional document management . In this workshop, we'll show you how to better manage documents in Confluence and completely modernize your process with features like document versioning, templating, and exporting to Word and PDF. So whether you're a development team putting together requirements documents, a legal team managing contracts, or an HR team collaborating on an employee handbook, we'll show you the best approach to managing your documents in Confluence."
+              "It's time to ditch clunky document management systems, break down content silos, and extend Confluence to teams who still rely on traditional document formats. Confluence is great for creating and managing content, but there are still a few drawbacks when it comes to traditional document management. In this workshop, we'll show you how to better manage documents in Confluence and completely modernize your process with features like document versioning, templating, and exporting to Word and PDF. So whether you're a development team putting together requirements documents, a legal team managing contracts, or an HR team collaborating on an employee handbook, we'll show you the best approach to managing your documents in Confluence."
           }
         }
       ]
@@ -34877,7 +34888,7 @@ const day2 = [
             }
           },
           {
-            title: "Let's build it. Confluence and Jira Refined.",
+            title: "Let's build it. Confluence and Jira Refined",
             speaker: 'Genevieve Blanch',
             company: 'RefinedWiki',
             extra: {
@@ -34890,22 +34901,23 @@ const day2 = [
           {
             time: '15:00 - 15:45',
             title: 'How to mix a delicious cocktail from Jira and Email? (extended version)',
-            speaker: 'META-INF'
+            speaker: 'Katarzyna Pawlak, Michał Sztuka',
+            company: 'Deviniti'
           },
           {
-            title: 'Become the Andy Warhol of your Customer Portal (PL)',
+            title: "How to improve your customer's journey through Jira Service Desk (PL)",
             speaker: 'Katarzyna Pawlak, Michał Sztuka',
             company: 'Deviniti',
             extra: {
               content:
-                'Do you know Campbell’s Soup Cans or Marilyn Monroe portrait? Andy Warhol was one of the famous artist in pop art and you can gain similar popularity in your company. Unleash your creativity and build beautiful Customer Portal using our new app: Theme Extension for Jira Service Desk.'
+                "Jira Service Desk is ITSM software that over 20,000 IT and business teams all around the world actually like to use. We'll show you the advanced possibilities of customizing this solution on each step of the customer journey - from the Help Center homepage, through request forms, up to submitting feedback upon successful ticket resolution."
             }
           }
         ]
       ]
     }
   ],
-  [{ time: '16:00 - 16:30', title: 'Closing note with price lottery', last: true, whole: true }]
+  [{ time: '16:00 - 16:30', title: 'Closing speech with prize lottery', last: true, whole: true }]
 ];
 /* harmony export (immutable) */ __webpack_exports__["b"] = day2;
 
@@ -35181,7 +35193,7 @@ const step4 = {
   {
     avatar: 'assets/img/Genevieve_Blanch.JPG',
     name: 'Genevieve Blanch',
-    company: 'RefinedWiki',
+    company: 'Refined',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/genevieveblanch/' }]
   },
   {
@@ -35281,28 +35293,90 @@ const step4 = {
 
 "use strict";
 const gold = [
-  { image: 'assets/img/riada.png', name: 'riada' },
-  { image: 'assets/img/SP.png', name: 'softwareplant' },
-  { image: 'assets/img/communardo.png', name: 'communardo' },
-  { image: 'assets/img/resolution.png', name: 'resolution' },
-  { image: 'assets/img/eazyBi.png', name: 'eazyBi' }
+  {
+    image: 'assets/img/riada.png',
+    name: 'riada',
+    url: 'https://www.riada.se/'
+  },
+  {
+    image: 'assets/img/SP.png',
+    name: 'softwareplant',
+    url: 'https://www.softwareplant.com'
+  },
+  {
+    image: 'assets/img/communardo.png',
+    name: 'communardo',
+    url: 'https://www.communardo.de'
+  },
+  {
+    image: 'assets/img/resolution.png',
+    name: 'resolution',
+    url: 'https://www.resolution.de'
+  },
+  {
+    image: 'assets/img/eazyBi.png',
+    name: 'eazyBi',
+    url: 'https://www.eazybi.com'
+  }
 ];
 /* harmony export (immutable) */ __webpack_exports__["a"] = gold;
 
 
 const silver = [
-  { image: 'assets/img/aalmworks.png', name: 'aalmworks' },
-  { image: 'assets/img/refinedwiki.png', name: 'refinedwiki' },
-  { image: 'assets/img/spartez.png', name: 'spartez' },
-  { image: 'assets/img/tempo.png', name: 'tempo' },
-  { image: 'assets/img/comalatech.png', name: 'comalatech' },
-  { image: 'assets/img/stillsoft.png', name: 'stillsoft' },
-  { image: 'assets/img/deiser.png', name: 'deiser' },
-  { image: 'assets/img/k15t.png', name: 'k15t' },
-  { image: 'assets/img/metainf.png', name: 'metainf' },
-  { image: 'assets/img/lucidchart.png', name: 'lucidchart' }
+  {
+    image: 'assets/img/aalmworks.png',
+    name: 'aalmworks',
+    url: 'https://www.almworks.com'
+  },
+  {
+    image: 'assets/img/refined.png',
+    name: 'refined',
+    url: 'https://www.refinedwiki.com '
+  },
+  {
+    image: 'assets/img/spartez.png',
+    name: 'spartez',
+    url: 'https://www.spartez.com'
+  },
+  { image: 'assets/img/tempo.png', name: 'tempo', url: 'https://www.tempo.io' },
+  {
+    image: 'assets/img/comalatech.png',
+    name: 'comalatech',
+    url: 'https://www.comalatech.com'
+  },
+  {
+    image: 'assets/img/stillsoft.png',
+    name: 'stillsoft',
+    url: 'https://www.stiltsoft.com'
+  },
+  {
+    image: 'assets/img/deiser.png',
+    name: 'deiser',
+    url: 'https://www.deiser.com'
+  },
+  { image: 'assets/img/k15t.png', name: 'k15t', url: 'https://www.k15t.com' },
+  {
+    image: 'assets/img/metainf.png',
+    name: 'metainf',
+    url: 'https://www.meta-inf.hu'
+  },
+  {
+    image: 'assets/img/lucidchart.png',
+    name: 'lucidchart',
+    url: 'https://www.lucidchart.com'
+  }
 ];
-/* harmony export (immutable) */ __webpack_exports__["b"] = silver;
+/* harmony export (immutable) */ __webpack_exports__["c"] = silver;
+
+
+const media = [
+  {
+    image: 'assets/img/noFluffJobs.jpg',
+    name: 'nofluff{jobs}',
+    url: 'https://www.nofluffjobs.com'
+  }
+];
+/* harmony export (immutable) */ __webpack_exports__["b"] = media;
 
 
 
@@ -35312,7 +35386,7 @@ const silver = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1553211276012
+      // 1554276201099
       var cssReload = require("!../../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -35325,7 +35399,7 @@ const silver = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1553211275992
+      // 1554276201080
       var cssReload = require("!../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -35338,7 +35412,7 @@ const silver = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1553211277606
+      // 1554276202537
       var cssReload = require("!../node_modules/css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
