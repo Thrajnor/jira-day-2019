@@ -35457,7 +35457,7 @@ const step4 = {
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/jakub-kurcek-3b61a462/' }]
   },
   {
-    avatar: 'assets/img/Feico_Mol.png',
+    avatar: 'assets/img/Feico_Mol.jpg',
     name: 'Feico Mol',
     company: 'Atlassian',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/feicomol/' }]
@@ -35482,7 +35482,7 @@ const step4 = {
   {
     avatar: 'assets/img/Tarun_Sapra.jpg',
     name: 'Tarun Sapra',
-    company: '',
+    company: 'Ingenico Group',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/tsapra/' }]
   },
   {
@@ -35542,7 +35542,7 @@ const step4 = {
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/kucharski/' }]
   },
   {
-    avatar: 'assets/img/Zihni_Saglam.png',
+    avatar: 'assets/img/Zihni_Saglam.jpg',
     name: 'Zihni Saglam',
     company: 'Riada',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/zihni-saglam/' }]
@@ -35560,13 +35560,13 @@ const step4 = {
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/tobias-theobald/' }]
   },
   {
-    avatar: 'assets/img/Janis_Plume.png',
+    avatar: 'assets/img/Janis_Plume.jpg',
     name: 'Jānis Plūme',
     company: 'EazyBI',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/janis-plume-0943a617/' }]
   },
   {
-    avatar: 'assets/img/Julia_Skoursky.png',
+    avatar: 'assets/img/Julia_Skoursky.jpg',
     name: 'Julia Skoursky',
     company: 'ALM Works',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/juliakoz/' }]
@@ -35636,13 +35636,13 @@ const step4 = {
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/josephmcfarlane/' }]
   },
   {
-    avatar: 'assets/img/Kasia_Pawlak.png',
+    avatar: 'assets/img/Kasia_Pawlak.jpg',
     name: 'Katarzyna Pawlak',
     company: 'Deviniti',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/katarzynazofiapawlak/' }]
   },
   {
-    avatar: 'assets/img/natalia.korybska.png',
+    avatar: 'assets/img/natalia.korybska.jpg',
     name: 'Natalia Korybska',
     company: 'Deviniti',
     socialMedia: [
@@ -35650,7 +35650,7 @@ const step4 = {
     ]
   },
   {
-    avatar: 'assets/img/Jarek_Solecki.png',
+    avatar: 'assets/img/Jarek_Solecki.jpg',
     name: 'Jarosław Solecki',
     company: 'Deviniti',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/jareksolecki/' }]
@@ -35662,13 +35662,13 @@ const step4 = {
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/michal-sztuka/' }]
   },
   {
-    avatar: 'assets/img/Radoslaw_Cichocki.png',
+    avatar: 'assets/img/Radoslaw_Cichocki.jpg',
     name: 'Radosław Cichocki',
     company: 'Deviniti',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/rcichocki/' }]
   },
   {
-    avatar: 'assets/img/Boguslaw_Osuch.png',
+    avatar: 'assets/img/Boguslaw_Osuch.jpg',
     name: 'Bogusław Osuch',
     company: 'Deviniti',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/bosuch/' }]
@@ -35795,7 +35795,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1554815131682
+      // 1554819996116
       var cssReload = require("!../../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -35808,7 +35808,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1554815131663
+      // 1554819996098
       var cssReload = require("!../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -35821,7 +35821,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1554815132859
+      // 1554819997385
       var cssReload = require("!../node_modules/css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
