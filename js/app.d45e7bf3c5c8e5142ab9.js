@@ -11128,8 +11128,6 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   methods: {
     addImages: function(mode, index) {
       if (!this.allImages[0]) {
-        console.log('hallo');
-        console.log(this.allImages);
         this.allImages = __WEBPACK_IMPORTED_MODULE_7_assets_sections_howItWas_images_js__["a" /* default */];
       }
       if (mode === 'end') {
