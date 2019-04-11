@@ -10788,6 +10788,24 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_2_vee_
 
 // countDown =================================
 
+const getWindow = () => {
+  const width = 700;
+  const height = 550;
+  const left = (window.innerWidth - width) / 2;
+  const top = (window.innerHeight - height) / 2;
+  const opts =
+    'location=yes,status=1' +
+    ',width=' +
+    width +
+    ',height=' +
+    height +
+    ',top=' +
+    top +
+    ',left=' +
+    left;
+  return opts;
+};
+
 new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   data: {
     hasJS: true,
@@ -10797,43 +10815,26 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   created() {},
 
   methods: {
-    getWindow: function() {
-      const width = 700;
-      const height = 550;
-      const left = (window.innerWidth - width) / 2;
-      const top = (window.innerHeight - height) / 2;
-      const opts =
-        'location=yes,status=1' +
-        ',width=' +
-        width +
-        ',height=' +
-        height +
-        ',top=' +
-        top +
-        ',left=' +
-        left;
-      return opts;
-    },
     openTwitter: function() {
       window.open(
         'https://twitter.com/home?status=Are%20you%20interested%20in%20Jira%20Day%202019%20the%20largest%20conference%20in%20Central%20Europe?%20We%20have%20a%20good%20news%20for%20you%20-%20the%20tickets%20are%20available%20now%20until%2014th%20of%20april!%20' +
           this.url,
         '_blank',
-        this.getWindow()
+        getWindow()
       );
     },
     openFacebook: function() {
       window.open(
         'https://www.facebook.com/sharer/sharer.php?u=' + this.url + '%2F&amp;src=sdkpreparse',
         '_blank',
-        this.getWindow()
+        getWindow()
       );
     },
     openLinkedIn: function() {
       window.open(
         'https://www.linkedin.com/sharing/share-offsite/?url=' + this.url,
         '_blank',
-        this.getWindow()
+        getWindow()
       );
     },
     openVK: function() {
@@ -10851,43 +10852,26 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   created() {},
 
   methods: {
-    getWindow: function() {
-      const width = 700;
-      const height = 550;
-      const left = (window.innerWidth - width) / 2;
-      const top = (window.innerHeight - height) / 2;
-      const opts =
-        'location=yes,status=1' +
-        ',width=' +
-        width +
-        ',height=' +
-        height +
-        ',top=' +
-        top +
-        ',left=' +
-        left;
-      return opts;
-    },
     openTwitter: function() {
       window.open(
         'https://twitter.com/home?status=Are%20you%20interested%20in%20Jira%20Day%202019%20the%20largest%20conference%20in%20Central%20Europe?%20We%20have%20a%20good%20news%20for%20you%20-%20the%20tickets%20are%20available%20now%20until%2014th%20of%20april!%20' +
           this.url,
         '_blank',
-        this.getWindow()
+        getWindow()
       );
     },
     openFacebook: function() {
       window.open(
         'https://www.facebook.com/sharer/sharer.php?u=' + this.url + '%2F&amp;src=sdkpreparse',
         '_blank',
-        this.getWindow()
+        getWindow()
       );
     },
     openLinkedIn: function() {
       window.open(
         'https://www.linkedin.com/sharing/share-offsite/?url=' + this.url,
         '_blank',
-        this.getWindow()
+        getWindow()
       );
     },
     openVK: function() {
@@ -10930,6 +10914,17 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 }).$mount('#jiraDay');
 
 // speakers =================================
+const sort = toSort => {
+  const sorted = toSort;
+  sorted.sort(function(a, b) {
+    const nameA = a.sortBy ? a.sortBy.toLowerCase() : a.name.toLowerCase(),
+      nameB = b.sortBy ? b.sortBy.toLowerCase() : b.name.toLowerCase();
+    if (nameA < nameB) return -1;
+    if (nameA > nameB) return 1;
+    return 0;
+  });
+  return sorted;
+};
 
 new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   data: {
@@ -10937,17 +10932,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     category1: []
   },
   created() {
-    const cat1 = __WEBPACK_IMPORTED_MODULE_8_assets_sections_speakers_speakers_js__["a" /* default */];
-    cat1.sort(function(a, b) {
-      var nameA = a.name.toLowerCase(),
-        nameB = b.name.toLowerCase();
-      if (nameA < nameB)
-        //sort string ascending
-        return -1;
-      if (nameA > nameB) return 1;
-      return 0; //default return value (no sorting)
-    });
-    this.category1 = cat1;
+    this.category1 = sort(__WEBPACK_IMPORTED_MODULE_8_assets_sections_speakers_speakers_js__["a" /* default */]);
   }
 }).$mount('#speakers');
 
@@ -10971,41 +10956,9 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     media: []
   },
   created() {
-    const goldCat = __WEBPACK_IMPORTED_MODULE_9_assets_sections_partners_partners_js__["a" /* gold */];
-    goldCat.sort(function(a, b) {
-      var nameA = a.name.toLowerCase(),
-        nameB = b.name.toLowerCase();
-      if (nameA < nameB)
-        //sort string ascending
-        return -1;
-      if (nameA > nameB) return 1;
-      return 0; //default return value (no sorting)
-    });
-    this.gold = goldCat;
-
-    const silverCat = __WEBPACK_IMPORTED_MODULE_9_assets_sections_partners_partners_js__["c" /* silver */];
-    silverCat.sort(function(a, b) {
-      var nameA = a.name.toLowerCase(),
-        nameB = b.name.toLowerCase();
-      if (nameA < nameB)
-        //sort string ascending
-        return -1;
-      if (nameA > nameB) return 1;
-      return 0; //default return value (no sorting)
-    });
-    this.silver = silverCat;
-
-    const mediaCat = __WEBPACK_IMPORTED_MODULE_9_assets_sections_partners_partners_js__["b" /* media */];
-    mediaCat.sort(function(a, b) {
-      var nameA = a.name.toLowerCase(),
-        nameB = b.name.toLowerCase();
-      if (nameA < nameB)
-        //sort string ascending
-        return -1;
-      if (nameA > nameB) return 1;
-      return 0; //default return value (no sorting)
-    });
-    this.media = mediaCat;
+    this.gold = sort(__WEBPACK_IMPORTED_MODULE_9_assets_sections_partners_partners_js__["a" /* gold */]);
+    this.silver = sort(__WEBPACK_IMPORTED_MODULE_9_assets_sections_partners_partners_js__["c" /* silver */]);
+    this.media = sort(__WEBPACK_IMPORTED_MODULE_9_assets_sections_partners_partners_js__["b" /* media */]);
   }
 }).$mount('#partners');
 
@@ -35524,6 +35477,7 @@ const step4 = {
     ]
   },
   {
+    sortBy: 'Lukasz Krupa',
     avatar: 'assets/img/lukasz_Krupa.jpg',
     name: 'Łukasz Krupa',
     company: 'Deviniti',
@@ -35795,7 +35749,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1554819996116
+      // 1554989212652
       var cssReload = require("!../../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -35808,7 +35762,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1554819996098
+      // 1554989212631
       var cssReload = require("!../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -35821,7 +35775,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1554819997385
+      // 1554989213809
       var cssReload = require("!../node_modules/css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
