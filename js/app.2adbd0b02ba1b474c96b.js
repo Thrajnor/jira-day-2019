@@ -36031,12 +36031,12 @@ const day1 = [
     },
     {
       time: '12:45 - 13:15',
-      title: 'Od pomysłu i projektu do utrzymania w Jira Service Desk (PL)',
+      title: 'From idea and design to maintenance at Jira Service Desk (PL)',
       speaker: 'Artur Karpisz',
       company: 'Alior Bank',
       extra: {
         content:
-          '- Wyzwania w realizacji procesu projektowego w Jira i Jira Service Desk.\n- Programiści, administratorzy – prawa autorskie w Jira Service Desk.\n- Wnioski Jira Service Desk w procesie projektowym – optymalizacja formatek, akceptacje zespołowe i równoległe, integracja z innymi systemami.\n- Monitorowanie i zbieranie informacji na karcie projektu'
+          '- Challenges in the implementation of the design process at Jira and Jira Service Desk.\n- Developers, administrators - copyrights at Jira Service Desk.\n- Jira Service Desk applications in the design process - optimization of forms, team and parallel acceptance, integration with other systems.\n- Monitoring and collecting information on the project card.'
       }
     }
   ],
@@ -37241,7 +37241,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1555574758775
+      // 1556100454285
       var cssReload = require("!../../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -37254,7 +37254,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1555574758757
+      // 1556100454267
       var cssReload = require("!../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -37267,7 +37267,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1555574760195
+      // 1556100455857
       var cssReload = require("!../node_modules/css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
