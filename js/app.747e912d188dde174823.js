@@ -36161,7 +36161,8 @@ const day1 = [
         {
           time: '16:15 - 16:30',
           title: 'Driving Confluence Adoption',
-          speaker: 'K15t',
+          speaker: 'Anshuman Dash',
+          company: 'K15t',
           extra: {
             content:
               "You're convinced that Confluence is a great tool to create content together: it’s easy to add, discuss, and collaborate on content. But why do some teams struggle to get their people working in Confluence? Why do your co-workers still email files back and forth? In this talk, we’ll share how to build a culture of effective collaboration and how to make your Confluence pages shine. We'll cover communication guidelines, breaking up long pages, establishing content owners, and much more. By applying these tips, your team will be happier and work more effectively together."
@@ -36434,7 +36435,8 @@ const day2 = [
         {
           time: '15:00 - 15:45',
           title: 'So Long, Silos! How to Better Manage Your Documents in Confluence',
-          speaker: 'K15t',
+          speaker: 'Anshuman Dash',
+          company: 'K15t',
           extra: {
             content:
               "It's time to ditch clunky document management systems, break down content silos, and extend Confluence to teams who still rely on traditional document formats. Confluence is great for creating and managing content, but there are still a few drawbacks when it comes to traditional document management. In this workshop, we'll show you how to better manage documents in Confluence and completely modernize your process with features like document versioning, templating, and exporting to Word and PDF. So whether you're a development team putting together requirements documents, a legal team managing contracts, or an HR team collaborating on an employee handbook, we'll show you the best approach to managing your documents in Confluence."
@@ -37132,6 +37134,12 @@ const step4 = {
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/bosuch/' }]
   },
   {
+    avatar: 'assets/img/Anshuman_Dash.jpg',
+    name: 'Anshuman Dash',
+    company: 'K15t',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/anshuman-dash-9b9311a6/' }]
+  },
+  {
     avatar: 'assets/img/Frederic_Baronti.png',
     name: 'Federico Baronti Beltramo',
     company: 'DEISER',
@@ -37241,7 +37249,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1557134706757
+      // 1557145857016
       var cssReload = require("!../../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -37254,7 +37262,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1557134706736
+      // 1557145856998
       var cssReload = require("!../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -37267,7 +37275,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1557134708465
+      // 1557145859488
       var cssReload = require("!../node_modules/css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
