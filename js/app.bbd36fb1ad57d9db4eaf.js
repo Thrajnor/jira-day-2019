@@ -10984,7 +10984,7 @@ const isMobile = () => {
   return window.screen.width < 768;
 };
 
-// countDown =================================
+// Social Media =================================
 
 const getWindow = () => {
   const width = 700;
@@ -11236,6 +11236,32 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     this.media = sort(__WEBPACK_IMPORTED_MODULE_11_assets_sections_partners_partners_js__["b" /* media */]);
   }
 }).$mount('#partners');
+
+// Worth =================================
+
+new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
+  data: {
+    hasJS: true,
+    fullscreen: false,
+    video: null
+  },
+
+  watch: {
+    fullscreen: function() {
+      if (this.fullscreen) {
+        document.querySelector('body').setAttribute('style', 'overflow: hidden');
+      } else {
+        document.querySelector('body').setAttribute('style', 'overflow: initial');
+      }
+    }
+  },
+  methods: {
+    openYoutube: function(video) {
+      this.fullscreen = true;
+      this.video = video;
+    }
+  }
+}).$mount('#worth');
 
 // ticketForm =================================
 
@@ -36161,7 +36187,8 @@ const day1 = [
         {
           time: '16:15 - 16:30',
           title: 'Driving Confluence Adoption',
-          speaker: 'K15t',
+          speaker: 'Anshuman Dash',
+          company: 'K15t',
           extra: {
             content:
               "You're convinced that Confluence is a great tool to create content together: it’s easy to add, discuss, and collaborate on content. But why do some teams struggle to get their people working in Confluence? Why do your co-workers still email files back and forth? In this talk, we’ll share how to build a culture of effective collaboration and how to make your Confluence pages shine. We'll cover communication guidelines, breaking up long pages, establishing content owners, and much more. By applying these tips, your team will be happier and work more effectively together."
@@ -36195,7 +36222,8 @@ const day1 = [
         {
           time: '16:30 - 16:45',
           title: 'Discover Tempo Apps for Jira',
-          speaker: 'Tempo',
+          speaker: 'Eyglo Oskarsdottir',
+          company: 'Tempo',
           extra: {
             content:
               "Tempo's solutions seamlessly integrate into the daily workflow of technical and non-technical teams to boost collaboration, productivity, efficiency, and better decision making. Viewing project work and your assigned Jira issues on a calendar helps you see when work is happening, so you can stay on top of deadlines and get a sense of your workload."
@@ -36388,7 +36416,8 @@ const day2 = [
           {
             time: '12:00 - 12:45',
             title: 'From time tracking to resource management: Improving Jira with Tempo apps',
-            speaker: 'Tempo',
+            speaker: 'Thorunn Oskarsdottir',
+            company: 'Tempo',
             extra: {
               content:
                 'Avoid overworking your teams and make the most of your resources with Tempo. Feel more confident by helping your teams stay on top of their job every day. With accurate data, you gain more granular information and build reports in seconds. How can teams track time and be in control of their work every day? With Tempo, you can!'
@@ -36434,7 +36463,8 @@ const day2 = [
         {
           time: '15:00 - 15:45',
           title: 'So Long, Silos! How to Better Manage Your Documents in Confluence',
-          speaker: 'K15t',
+          speaker: 'Anshuman Dash',
+          company: 'K15t',
           extra: {
             content:
               "It's time to ditch clunky document management systems, break down content silos, and extend Confluence to teams who still rely on traditional document formats. Confluence is great for creating and managing content, but there are still a few drawbacks when it comes to traditional document management. In this workshop, we'll show you how to better manage documents in Confluence and completely modernize your process with features like document versioning, templating, and exporting to Word and PDF. So whether you're a development team putting together requirements documents, a legal team managing contracts, or an HR team collaborating on an employee handbook, we'll show you the best approach to managing your documents in Confluence."
@@ -37132,6 +37162,28 @@ const step4 = {
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/bosuch/' }]
   },
   {
+    avatar: 'assets/img/Anshuman_Dash.jpg',
+    name: 'Anshuman Dash',
+    company: 'K15t',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/anshuman-dash-9b9311a6/' }]
+  },
+  {
+    avatar: 'assets/img/Eyglo_Oskarsdottir.jpeg',
+    name: 'Eyglo Oskarsdottir',
+    company: 'Tempo',
+    socialMedia: [
+      { name: 'linkedIn', link: 'https://www.linkedin.com/in/eyglo-myrra-oskarsdottir-23813366/' }
+    ]
+  },
+  {
+    avatar: 'assets/img/Thorunn_Oskarsdottir.jpeg',
+    name: 'Thorunn Oskarsdottir',
+    company: 'Tempo',
+    socialMedia: [
+      { name: 'linkedIn', link: 'https://www.linkedin.com/in/thorunn-oskarsdottir-69879274/' }
+    ]
+  },
+  {
     avatar: 'assets/img/Frederic_Baronti.png',
     name: 'Federico Baronti Beltramo',
     company: 'DEISER',
@@ -37241,7 +37293,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1557134706757
+      // 1557153778569
       var cssReload = require("!../../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -37254,7 +37306,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1557134706736
+      // 1557153778554
       var cssReload = require("!../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -37267,7 +37319,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1557134708465
+      // 1557153780045
       var cssReload = require("!../node_modules/css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
