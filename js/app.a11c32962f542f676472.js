@@ -36130,7 +36130,7 @@ const day1 = [
       company: 'Ingenico Group',
       extra: {
         content:
-          "A lot of new features have been added to the Jira cloud recently, whether it's new the UI, next‑gen projects, incident management. This talk aims to delve deeper into these features, especially covering all the pros and cons from an end‑user perspective and how the agile teams can get up to speed with these new features. We will look into all the new next‑gen project features like roadmaps, feature toggle, incident management project templates and their integration with Ops genie. We’ll learn how we can streamline incident management process in one place with Jira Cloud and involve all the relevant stakeholders in a single Jira issue view instead of sending emails to individual teams."
+          "A lot of new features have been added to the Jira cloud recently, whether it's new the UI, next‑gen projects, better integrations. This talk aims to delve deeper into these features, especially covering all the pros and cons from an end‑user perspective and how the agile teams can get up to speed with these new features. We will look into all the new Jira cloud features like roadmaps, feature toggle, improved GitHub integration, easier user management and seamless integration with opsgenie. Also, we will explore some real-life enterprise-scale scenarios for adopting cloud over the server and vice-versa."
       }
     }
   ],
@@ -37241,7 +37241,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1556197607327
+      // 1557134706757
       var cssReload = require("!../../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -37254,7 +37254,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1556197607306
+      // 1557134706736
       var cssReload = require("!../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -37267,7 +37267,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1556197609984
+      // 1557134708465
       var cssReload = require("!../node_modules/css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
