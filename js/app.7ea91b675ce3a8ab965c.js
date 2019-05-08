@@ -36372,7 +36372,8 @@ const day2 = [
     {
       time: '11:00 - 12:30',
       title: 'Reporting on Jira for different teams and basic functionality of eazyBI',
-      speaker: 'eazyBI',
+      speaker: 'Jānis Plūme, Evita Legzdiņa',
+      company: 'eazyBI',
       extra: {
         content:
           'The extensive use of Jira as a collaboration tool gathers a lot of useful data from almost every activity of our daily work. Different teams require different reports from Jira data, and the reporting requirements grow soon and fast. eazyBI provides the flexibility in creating customized reports for different teams and helps to explore your data for better decision making. This session will provide insight into the basic functionality of eazyBI and will cover some typical use cases.'
@@ -37050,7 +37051,7 @@ const step4 = {
   {
     avatar: 'assets/img/Janis_Plume.jpg',
     name: 'Jānis Plūme',
-    company: 'EazyBI',
+    company: 'eazyBI',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/janis-plume-0943a617/' }]
   },
   {
@@ -37190,6 +37191,14 @@ const step4 = {
     socialMedia: [
       { name: 'linkedIn', link: 'https://www.linkedin.com/in/federico-baronti-beltramo-704b4233/' }
     ]
+  },
+  {
+    avatar: 'assets/img/Evita_Legzdiņa.jpg',
+    name: 'Evita Legzdiņa',
+    company: 'eazyBI',
+    socialMedia: [
+      { name: 'linkedIn', link: 'https://www.linkedin.com/in/evita-legzdina-06b56b23/' }
+    ]
   }
 ]);
 
@@ -37293,7 +37302,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1557153778569
+      // 1557311080462
       var cssReload = require("!../../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -37306,7 +37315,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1557153778554
+      // 1557311080445
       var cssReload = require("!../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -37319,7 +37328,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1557153780045
+      // 1557311081984
       var cssReload = require("!../node_modules/css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
