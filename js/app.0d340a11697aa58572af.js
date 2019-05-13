@@ -37304,6 +37304,16 @@ const media = [
     image: 'assets/img/noFluffJobs.jpg',
     name: 'nofluff{jobs}',
     url: 'https://www.nofluffjobs.com'
+  },
+  {
+    image: 'assets/img/justJoin.png',
+    name: 'Just Join IT',
+    url: 'https://www.justjoin.it'
+  },
+  {
+    image: 'assets/img/justGeek.jpg',
+    name: 'Just Geek IT',
+    url: 'https://www.justgeek.it'
   }
 ];
 /* harmony export (immutable) */ __webpack_exports__["b"] = media;
@@ -37316,7 +37326,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1557736819804
+      // 1557751647314
       var cssReload = require("!../../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -37329,7 +37339,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1557736819785
+      // 1557751647297
       var cssReload = require("!../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -37342,7 +37352,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1557736821327
+      // 1557751649238
       var cssReload = require("!../node_modules/css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
