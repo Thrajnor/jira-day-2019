@@ -36232,7 +36232,8 @@ const day1 = [
         {
           time: '16:45 - 17:00',
           title: 'How to mix a delicious cocktail from Jira and Email?',
-          speaker: 'Metainf'
+          speaker: 'Alexandra Terék',
+          company: 'Metainf'
         }
       ]
     },
@@ -36500,7 +36501,8 @@ const day2 = [
           {
             time: '15:00 - 15:45',
             title: 'How to mix a delicious cocktail from Jira and Email? (extended version)',
-            speaker: 'Metainf'
+            speaker: 'Alexandra Terék, László Sziács',
+            company: 'Metainf'
           },
           {
             title: "How to improve your customer's journey through Jira Service Desk (PL)",
@@ -37199,6 +37201,18 @@ const step4 = {
     socialMedia: [
       { name: 'linkedIn', link: 'https://www.linkedin.com/in/evita-legzdina-06b56b23/' }
     ]
+  },
+  {
+    avatar: 'assets/img/Alexandra_Terek.jpg',
+    name: 'Alexandra Terék',
+    company: 'Metainf',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/aterek/' }]
+  },
+  {
+    avatar: 'assets/img/Laszlo_Sziacs.jpg',
+    name: 'László Sziács',
+    company: 'Metainf',
+    socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/sziacs-laszlo/' }]
   }
 ]);
 
@@ -37302,7 +37316,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1557311080462
+      // 1557736819804
       var cssReload = require("!../../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -37315,7 +37329,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1557311080445
+      // 1557736819785
       var cssReload = require("!../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -37328,7 +37342,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1557311081984
+      // 1557736821327
       var cssReload = require("!../node_modules/css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
