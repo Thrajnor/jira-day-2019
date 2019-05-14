@@ -36286,12 +36286,12 @@ const day1 = [
     },
     {
       time: '17:00 - 17:30',
-      title: 'Become the Andy Warhol of your Customer Portal (PL)',
-      speaker: 'Katarzyna Pawlak, Michał Sztuka',
+      title: 'ITSM in Jira',
+      speaker: 'Radosław Cichocki',
       company: 'Deviniti',
       extra: {
         content:
-          'Do you know Campbell’s Soup Cans or the Marilyn Monroe portrait? Andy Warhol was the most famous pop artist, and you can gain similar popularity in your company. Unleash your creativity and build a beautiful Customer Portal using our new app: Theme Extension for Jira Service Desk.'
+          '• How can helpdesk employees better organize their work thanks to queues?\n• How to create basic reports and analyze the numbers of issues created vs. resolved within a given period?\n• How to guarantee a timely resolution of customers’ requests thanks to configurable SLAs (service-level agreements)?\n• How does Jira facilitate the cooperation between lines of support: an example of helpdesk and programmers?\n• What is the customer portal and what are the possibilities of adjusting it to customers’ needs?\n• How to increase the number of tickets solved by your agents without spoiling the work atmosphere and compromising customers’ satisfaction?\n• How to measure customers’ satisfaction?'
       }
     }
   ],
@@ -36334,12 +36334,12 @@ const day2 = [
             }
           },
           {
-            title: 'A step-by-step method for effectively implementing Jira Service Desk',
-            speaker: 'Radosław Cichocki',
+            title: 'Become the Andy Warhol of your Customer Portal (PL)',
+            speaker: 'Katarzyna Pawlak, Michał Sztuka',
             company: 'Deviniti',
             extra: {
               content:
-                'In this workshop you will learn how to start implementing Jira Service Desk depending on your status quo. Some organizations are young and do not have any experience with ITSM, helpdesk or customer service systems, whereas others have outgrown their current tools and would like to migrate to Jira. The starting point may vary, but the path is similar in both cases. You will walk with me through the process, learn what questions you should ask yourself and in what sequence, and see how to configure Jira Service Desk in practice based on the answers you receive from your teams. This workshop will give IT personnel guidelines on how to walk the path. To those of you who are from HR, legal, customer service, collections, and other departments, it will give you a glimpse into how you can provide your services to internal or external customers through a centralized service desk, and it will prepare you to think about the answers to the questions that your IT will ask in the future.'
+                'Do you know Campbell’s Soup Cans or the Marilyn Monroe portrait? Andy Warhol was the most famous pop artist, and you can gain similar popularity in your company. Unleash your creativity and build a beautiful Customer Portal using our new app: Theme Extension for Jira Service Desk.'
             }
           }
         ],
@@ -37326,7 +37326,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1557751647314
+      // 1557829592749
       var cssReload = require("!../../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -37339,7 +37339,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1557751647297
+      // 1557829592730
       var cssReload = require("!../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
@@ -37352,7 +37352,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1557751649238
+      // 1557829594527
       var cssReload = require("!../node_modules/css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
