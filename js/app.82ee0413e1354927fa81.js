@@ -10931,16 +10931,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_vue_youtube__ = __webpack_require__(196);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_vue_youtube___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_vue_youtube__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_assets_sections_agenda_agenda_js__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_assets_sections_ticketForm_formFields_js__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_assets_sections_howItWas_images_js__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_assets_sections_speakers_speakers_js__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_assets_sections_partners_partners_js__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_bootstrap_dist_css_bootstrap_css__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_bootstrap_dist_css_bootstrap_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_bootstrap_dist_css_bootstrap_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_bootstrap_vue_dist_bootstrap_vue_css__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_bootstrap_vue_dist_bootstrap_vue_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_bootstrap_vue_dist_bootstrap_vue_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_src_style_scss__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_src_style_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_src_style_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_assets_sections_howItWas_images_js__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_assets_sections_speakers_speakers_js__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_assets_sections_partners_partners_js__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_bootstrap_dist_css_bootstrap_css__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_bootstrap_dist_css_bootstrap_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_bootstrap_dist_css_bootstrap_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_bootstrap_vue_dist_bootstrap_vue_css__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_bootstrap_vue_dist_bootstrap_vue_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_bootstrap_vue_dist_bootstrap_vue_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_src_style_scss__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_src_style_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_src_style_scss__);
 
 
 
@@ -10950,7 +10949,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-
+// import { step1, step2, step3, step4 } from 'assets/sections/ticketForm/formFields.js';
 
 
 
@@ -11135,10 +11134,10 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   methods: {
     openYoutube: function() {
       this.fullscreen = true;
-    },
-    doneScrolling: function() {
-      window.location.hash = '#buyTickets';
     }
+    // doneScrolling: function() {
+    //   window.location.hash = '#buyTickets';
+    // }
   }
 }).$mount('#jiraDay');
 
@@ -11161,7 +11160,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     category1: []
   },
   created() {
-    this.category1 = sort(__WEBPACK_IMPORTED_MODULE_10_assets_sections_speakers_speakers_js__["a" /* default */]);
+    this.category1 = sort(__WEBPACK_IMPORTED_MODULE_9_assets_sections_speakers_speakers_js__["a" /* default */]);
   }
 }).$mount('#speakers');
 
@@ -11231,9 +11230,9 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     media: []
   },
   created() {
-    this.gold = sort(__WEBPACK_IMPORTED_MODULE_11_assets_sections_partners_partners_js__["a" /* gold */]);
-    this.silver = sort(__WEBPACK_IMPORTED_MODULE_11_assets_sections_partners_partners_js__["c" /* silver */]);
-    this.media = sort(__WEBPACK_IMPORTED_MODULE_11_assets_sections_partners_partners_js__["b" /* media */]);
+    this.gold = sort(__WEBPACK_IMPORTED_MODULE_10_assets_sections_partners_partners_js__["a" /* gold */]);
+    this.silver = sort(__WEBPACK_IMPORTED_MODULE_10_assets_sections_partners_partners_js__["c" /* silver */]);
+    this.media = sort(__WEBPACK_IMPORTED_MODULE_10_assets_sections_partners_partners_js__["b" /* media */]);
   }
 }).$mount('#partners');
 
@@ -11263,127 +11262,127 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   }
 }).$mount('#worth');
 
-// ticketForm =================================
+// // ticketForm =================================
 
-new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
-  el: '#ticketForm',
-  data() {
-    return {
-      hasJS: true,
-      submitted: false,
-      submitting: false,
-      steps: [__WEBPACK_IMPORTED_MODULE_8_assets_sections_ticketForm_formFields_js__["a" /* step1 */], __WEBPACK_IMPORTED_MODULE_8_assets_sections_ticketForm_formFields_js__["b" /* step2 */], __WEBPACK_IMPORTED_MODULE_8_assets_sections_ticketForm_formFields_js__["c" /* step3 */], __WEBPACK_IMPORTED_MODULE_8_assets_sections_ticketForm_formFields_js__["d" /* step4 */]]
-    };
-  },
+// new Vue({
+//   el: '#ticketForm',
+//   data() {
+//     return {
+//       hasJS: true,
+//       submitted: false,
+//       submitting: false,
+//       steps: [step1, step2, step3, step4]
+//     };
+//   },
 
-  watch: {
-    submitted: function() {
-      if (this.submitted) {
-        for (const step of this.steps) {
-          step.controlVisible = false;
-        }
-      } else {
-        for (const step of this.steps) {
-          step.controlVisible = true;
-        }
-      }
-    },
-    submitting: function() {
-      if (!this.submitted) {
-        if (this.submitting) {
-          for (const step of this.steps) {
-            step.controlVisible = false;
-          }
-        } else {
-          for (const step of this.steps) {
-            step.controlVisible = true;
-          }
-        }
-      }
-    }
-  },
+//   watch: {
+//     submitted: function() {
+//       if (this.submitted) {
+//         for (const step of this.steps) {
+//           step.controlVisible = false;
+//         }
+//       } else {
+//         for (const step of this.steps) {
+//           step.controlVisible = true;
+//         }
+//       }
+//     },
+//     submitting: function() {
+//       if (!this.submitted) {
+//         if (this.submitting) {
+//           for (const step of this.steps) {
+//             step.controlVisible = false;
+//           }
+//         } else {
+//           for (const step of this.steps) {
+//             step.controlVisible = true;
+//           }
+//         }
+//       }
+//     }
+//   },
 
-  methods: {
-    focusOnFirstError: function() {
-      const errors = this.errors.collect();
-      const keys = Object.keys(errors);
-      const ref = keys[0];
-      if (this.$refs[ref]) {
-        this.$refs[ref][0].focus();
-      }
-    },
-    isStatusVisible: function(i, fieldNumber) {
-      const field = this.steps[i].fields[fieldNumber];
-      const scope = '$step' + (i + 1);
-      return (
-        !this.steps[i].disabled &&
-        this.fields[scope] &&
-        this.fields[scope][field.name].dirty &&
-        (field.value || !this.errors.has('step' + i + '.' + field.name))
-      );
-    },
-    toggleInputs: function(stepNumber) {
-      const step = this.steps[stepNumber];
-      step.disabled = !step.disabled;
-    },
-    onNext: function(stepNumber) {
-      const step = this.steps[stepNumber];
-      this.$validator.validateAll('step' + (stepNumber + 1)).then(r => {
-        if (r) {
-          step.buttonVisible = !step.buttonVisible;
-          step.controlVisible = !step.controlVisible;
-          this.steps[stepNumber + 1].collapsed = true;
-          this.toggleInputs(stepNumber);
-        } else {
-          this.focusOnFirstError();
-        }
-      });
-    },
-    focusNext: function(ref, step) {
-      if (ref) {
-        this.$refs[ref.name][0].focus();
-      } else {
-        this.onNext(step);
-      }
-    },
-    validateAllSteps: function() {
-      let validations = [];
-      for (const step in this.steps) {
-        if (this.submitting) {
-          validations.push(
-            this.$validator.validateAll(`step${Number(step) + 1}`).then(r => {
-              if (!r) {
-                this.submitting = false;
-              }
-              return r;
-            })
-          );
-        }
-      }
-      return Promise.all(validations).then(results => results.every(r => r));
-    },
-    onSubmit: function() {
-      if (!this.submitted && !this.submitting) {
-        this.submitting = true;
+//   methods: {
+//     focusOnFirstError: function() {
+//       const errors = this.errors.collect();
+//       const keys = Object.keys(errors);
+//       const ref = keys[0];
+//       if (this.$refs[ref]) {
+//         this.$refs[ref][0].focus();
+//       }
+//     },
+//     isStatusVisible: function(i, fieldNumber) {
+//       const field = this.steps[i].fields[fieldNumber];
+//       const scope = '$step' + (i + 1);
+//       return (
+//         !this.steps[i].disabled &&
+//         this.fields[scope] &&
+//         this.fields[scope][field.name].dirty &&
+//         (field.value || !this.errors.has('step' + i + '.' + field.name))
+//       );
+//     },
+//     toggleInputs: function(stepNumber) {
+//       const step = this.steps[stepNumber];
+//       step.disabled = !step.disabled;
+//     },
+//     onNext: function(stepNumber) {
+//       const step = this.steps[stepNumber];
+//       this.$validator.validateAll('step' + (stepNumber + 1)).then(r => {
+//         if (r) {
+//           step.buttonVisible = !step.buttonVisible;
+//           step.controlVisible = !step.controlVisible;
+//           this.steps[stepNumber + 1].collapsed = true;
+//           this.toggleInputs(stepNumber);
+//         } else {
+//           this.focusOnFirstError();
+//         }
+//       });
+//     },
+//     focusNext: function(ref, step) {
+//       if (ref) {
+//         this.$refs[ref.name][0].focus();
+//       } else {
+//         this.onNext(step);
+//       }
+//     },
+//     validateAllSteps: function() {
+//       let validations = [];
+//       for (const step in this.steps) {
+//         if (this.submitting) {
+//           validations.push(
+//             this.$validator.validateAll(`step${Number(step) + 1}`).then(r => {
+//               if (!r) {
+//                 this.submitting = false;
+//               }
+//               return r;
+//             })
+//           );
+//         }
+//       }
+//       return Promise.all(validations).then(results => results.every(r => r));
+//     },
+//     onSubmit: function() {
+//       if (!this.submitted && !this.submitting) {
+//         this.submitting = true;
 
-        this.validateAllSteps().then(r => {
-          if (r && this.submitting) {
-            this.submitting = false;
-            this.submitted = true;
-            this.toggleInputs(this.steps.length - 1);
-          } else {
-            this.submitting = false;
-            this.focusOnFirstError();
-          }
-        });
-      } else if (this.submitting) {
-        // error todo
-      } else if (this.submitted) {
-        // error todo
-      }
-    }
-  }
-});
+//         this.validateAllSteps().then(r => {
+//           if (r && this.submitting) {
+//             this.submitting = false;
+//             this.submitted = true;
+//             this.toggleInputs(this.steps.length - 1);
+//           } else {
+//             this.submitting = false;
+//             this.focusOnFirstError();
+//           }
+//         });
+//       } else if (this.submitting) {
+//         // error todo
+//       } else if (this.submitted) {
+//         // error todo
+//       }
+//     }
+//   }
+// });
 
 // Gallery =================================
 
@@ -11437,7 +11436,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   methods: {
     addImages: function(mode, index) {
       if (!this.allImages[0]) {
-        this.allImages = __WEBPACK_IMPORTED_MODULE_9_assets_sections_howItWas_images_js__["a" /* default */];
+        this.allImages = __WEBPACK_IMPORTED_MODULE_8_assets_sections_howItWas_images_js__["a" /* default */];
       }
       if (mode === 'end') {
         const myImageLastIndex = this.images.length - 1;
@@ -35918,7 +35917,7 @@ const day1 = [
   [
     {
       time: '10:45 - 11:15',
-      title: 'How Atlassian Jira software supports HP on its LPPD journey',
+      title: 'How Atlassian software supports HP on its LPPD journey',
       speaker: 'Tanya Gordon',
       company: 'HP',
       extra: {
@@ -35977,7 +35976,7 @@ const day1 = [
     {
       time: '12:15 - 12:45',
       title: 'Big changes in Jira & Portfolio',
-      speaker: 'Małgorzata Gułgowska-Kowalska i Jakub Kurcek',
+      speaker: 'Małgorzata Kowalska i Jakub Kurcek',
       company: 'Atlassian',
       extra: {
         content:
@@ -36045,7 +36044,7 @@ const day1 = [
         },
         {
           time: '13:00 - 13:15',
-          title: 'Live Tracking and Reporting in Jira',
+          title: 'Executives, all you always wanted to know about Agile but were afraid to ask',
           speaker: 'Tom Kucharski',
           company: 'SoftwarePlant',
           extra: {
@@ -36291,7 +36290,7 @@ const day1 = [
       company: 'Deviniti',
       extra: {
         content:
-          '• How can helpdesk employees better organize their work thanks to queues?\n• How to create basic reports and analyze the numbers of issues created vs. resolved within a given period?\n• How to guarantee a timely resolution of customers’ requests thanks to configurable SLAs (service-level agreements)?\n• How does Jira facilitate the cooperation between lines of support: an example of helpdesk and programmers?\n• What is the customer portal and what are the possibilities of adjusting it to customers’ needs?\n• How to increase the number of tickets solved by your agents without spoiling the work atmosphere and compromising customers’ satisfaction?\n• How to measure customers’ satisfaction?'
+          'Here is what you will learn from this talk:\n • How can helpdesk employees better organize their work thanks to queues?\n• How to create basic reports and analyze the numbers of issues created vs. resolved within a given period?\n• How to guarantee a timely resolution of customers’ requests thanks to configurable SLAs (service-level agreements)?\n• How does Jira facilitate the cooperation between lines of support: an example of helpdesk and programmers?\n• What is the customer portal and what are the possibilities of adjusting it to customers’ needs?\n• How to increase the number of tickets solved by your agents without spoiling the work atmosphere and compromising customers’ satisfaction?\n• How to measure customers’ satisfaction?'
       }
     }
   ],
@@ -36526,91 +36525,6 @@ const day2 = [
 
 /***/ }),
 /* 210 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-const step1 = {
-  name: 'Basic data',
-  disabled: false,
-  collapsed: true,
-  buttonVisible: true,
-  controlVisible: false,
-  fields: [
-    {
-      value: '',
-      name: 'name',
-      label: 'Name',
-      reqs: 'required|min:3'
-    },
-    {
-      value: '',
-      name: 'email',
-      label: 'Email address'
-    },
-    {
-      value: '',
-      name: 'phone',
-      label: 'Phone'
-    }
-  ]
-};
-/* harmony export (immutable) */ __webpack_exports__["a"] = step1;
-
-
-const step2 = {
-  name: 'Company data',
-  disabled: false,
-  collapsed: false,
-  buttonVisible: true,
-  controlVisible: false,
-  fields: [
-    {
-      value: '',
-      name: 'placeholder',
-      label: 'placeholder'
-    }
-  ]
-};
-/* harmony export (immutable) */ __webpack_exports__["b"] = step2;
-
-
-const step3 = {
-  name: 'Billing information',
-  disabled: false,
-  collapsed: false,
-  buttonVisible: true,
-  controlVisible: false,
-  fields: [
-    {
-      value: '',
-      name: 'placeholder',
-      label: 'placeholder'
-    }
-  ]
-};
-/* harmony export (immutable) */ __webpack_exports__["c"] = step3;
-
-
-const step4 = {
-  name: 'Summary',
-  disabled: false,
-  collapsed: false,
-  buttonVisible: true,
-  controlVisible: false,
-  fields: [
-    {
-      value: '',
-      name: 'placeholder',
-      label: 'placeholder'
-    }
-  ]
-};
-/* harmony export (immutable) */ __webpack_exports__["d"] = step4;
-
-
-
-/***/ }),
-/* 211 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36909,7 +36823,7 @@ const step4 = {
 
 
 /***/ }),
-/* 212 */
+/* 211 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36936,7 +36850,7 @@ const step4 = {
   },
   {
     avatar: 'assets/img/Gosia_Gulagowska.jpg',
-    name: 'Małgorzata Gułgowska-Kowalska',
+    name: 'Małgorzata Kowalska',
     company: 'Atlassian',
     socialMedia: [{ name: 'linkedIn', link: 'https://www.linkedin.com/in/malgorzatagulgowska/' }]
   },
@@ -37218,7 +37132,7 @@ const step4 = {
 
 
 /***/ }),
-/* 213 */
+/* 212 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37321,13 +37235,26 @@ const media = [
 
 
 /***/ }),
+/* 213 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// removed by extract-text-webpack-plugin
+    if(false) {
+      // 1558689733605
+      var cssReload = require("!../../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
+      module.hot.dispose(cssReload);
+      module.hot.accept(undefined, cssReload);;
+    }
+  
+
+/***/ }),
 /* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1557829592749
-      var cssReload = require("!../../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
+      // 1558689733589
+      var cssReload = require("!../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
     }
@@ -37339,20 +37266,7 @@ const media = [
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1557829592730
-      var cssReload = require("!../../css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
-      module.hot.dispose(cssReload);
-      module.hot.accept(undefined, cssReload);;
-    }
-  
-
-/***/ }),
-/* 216 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// removed by extract-text-webpack-plugin
-    if(false) {
-      // 1557829594527
+      // 1558689735241
       var cssReload = require("!../node_modules/css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);;
